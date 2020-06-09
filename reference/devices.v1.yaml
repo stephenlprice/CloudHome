@@ -15,8 +15,8 @@ info:
     name: MIT
     url: 'https://opensource.org/licenses/MIT'
 servers:
-  - url: 'http://localhost:3000'
-    description: /v1
+  - url: 'https://cloudhome.io'
+    description: CloudHome device platform
 paths:
   '/api/devices/{accountid}/{locationid}':
     get:
@@ -54,18 +54,18 @@ paths:
         name: accountid
         in: path
         required: true
-        description: "unique per account (see 'My Account' for more information)"
+        description: unique per account (see 'My Account' for more information)
       - schema:
           type: string
         name: locationid
         in: path
         required: true
-        description: "location associated with the devices (see 'My Locations' for more)"
+        description: location associated with the devices (see 'My Locations' for more)
 components:
   schemas: {}
   securitySchemes:
-    API Key - 1:
+    API Key:
       name: API Key
       type: apiKey
       in: query
-      description: "Provided upon account registration (see 'My Account' for more information)"
+      description: Provided upon account registration (see 'My Account' for more information)
