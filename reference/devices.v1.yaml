@@ -64,8 +64,14 @@ paths:
 components:
   schemas: {}
   securitySchemes:
-    API Key:
+    CloudHome Key:
       name: API Key
       type: apiKey
       in: query
       description: Provided upon account registration (see 'My Account' for more information)
+    Login Token:
+      type: http
+      scheme: bearer
+      description: Bearer token provided after successful login to CloudHome
+    OAuth2:
+      type: oauth2
