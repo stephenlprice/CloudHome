@@ -67,11 +67,21 @@ components:
     CloudHome Key:
       name: API Key
       type: apiKey
-      in: query
+      in: header
       description: Provided upon account registration (see 'My Account' for more information)
     Login Token:
       type: http
       scheme: bearer
-      description: Bearer token provided after successful login to CloudHome
-    OAuth2:
+      description: Bearer token (JWT) provided after successful login to CloudHome
+    Social Media Account:
       type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: 'https://cloudhome.io/oauth2/authorize'
+          tokenUrl: 'https://cloudhome.io/oauth2/token'
+          scopes: {}
+          refreshUrl: 'https://cloudhome.io/oauth2/refresh'
+        implicit:
+          authorizationUrl: 'https://cloudhome.io/oauth2/authorize'
+          refreshUrl: 'https://cloudhome.io/oauth2/refresh'
+          scopes: {}
