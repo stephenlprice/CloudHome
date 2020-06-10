@@ -73,7 +73,7 @@ components:
       type: http
       scheme: basic
       description: 'Basic HTTP Authentication as per [RFC-2617](https://tools.ietf.org/html/rfc2617) (Digest not supported). Note that Basic Auth with username and password as credentials is only available on accounts that have 2-factor-auth / 2-step-verification disabled. If you use 2fa, you should authenticate using OAuth2 instead.'
-    Social Media Account:
+    OAuth:
       type: oauth2
       flows:
         authorizationCode:
@@ -99,4 +99,8 @@ components:
             'devices:delete': Delete your devices
             'locations:delete': Delete your locations
             'users:delete': Delete your users
-      description: 'OAuth 2 as per [RFC-6749](https://tools.ietf.org/html/rfc6749). Supports Authorization Code and Implicit flows.'
+      description: 'OAuth 2 as per [RFC-6749](https://tools.ietf.org/html/rfc6749). OAuth2 is a protocol that lets external apps request authorization to private details in a user''s CloudHome account without getting their password. This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.'
+    OpenID Connect:
+      type: openIdConnect
+      openIdConnectUrl: 'https://cloudhome.io/auth/openid-configuration'
+      description: ''
