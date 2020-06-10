@@ -79,9 +79,17 @@ components:
         authorizationCode:
           authorizationUrl: 'https://cloudhome.io/oauth2/authorize'
           tokenUrl: 'https://cloudhome.io/oauth2/token'
-          scopes: {}
+          scopes:
+            'devices:write': Read and modify your devices
+            'locations:write': Read and modify your locations
+            'accounts:write': Read and modify your accounts
+            'users:write': Read and modify your users
+            'devices:delete': Delete your devices
+            'locations:delete': Delete your locations
+            'users:delete': Delete your users
           refreshUrl: 'https://cloudhome.io/oauth2/refresh'
         implicit:
           authorizationUrl: 'https://cloudhome.io/oauth2/authorize'
           refreshUrl: 'https://cloudhome.io/oauth2/refresh'
           scopes: {}
+      description: 'OAuth 2 as per [RFC-6749](https://tools.ietf.org/html/rfc6749). Supports Authorization Code and Implicit flows.'
