@@ -29,7 +29,7 @@ paths:
       description: |-
         Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
 
-        Account IDs are provided by CloudHome while Location IDs are defined by the account administrator.
+        Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
     post:
       summary: newDevice
       tags:
