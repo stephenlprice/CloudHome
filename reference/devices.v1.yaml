@@ -26,7 +26,10 @@ paths:
         - IOT
       responses: {}
       operationId: get-api-devices
-      description: Returns a list of devices
+      description: |-
+        Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
+
+        Account IDs are provided by CloudHome while Location IDs are defined by the account administrator.
     post:
       summary: newDevice
       tags:
@@ -51,16 +54,19 @@ paths:
     parameters:
       - schema:
           type: string
+          example: jetsonsFutureHome
         name: accountid
         in: path
         required: true
         description: unique per account (see 'My Account' for more information)
       - schema:
           type: string
+          default: all
+          example: seattle-office
         name: locationid
         in: path
-        required: true
         description: location associated with the devices (see 'My Locations' for more)
+        required: true
 components:
   schemas: {}
   securitySchemes:
