@@ -1,0 +1,23 @@
+{
+  "title": "Location",
+  "type": "object",
+  "description": "Device geolocation at most recent update. Users can optionally choose to turn off geolocation, however key features such as mapping will not be available.",
+  "properties": {
+    "deviceID": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "long": {
+      "type": "number"
+    },
+    "geolocation": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "deviceID",
+    "geolocation"
+  ]
+}

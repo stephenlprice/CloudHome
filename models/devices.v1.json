@@ -15,10 +15,6 @@
       "type": "string",
       "description": "user generated name"
     },
-    "quantity": {
-      "type": "integer",
-      "description": "amount of managed devices"
-    },
     "deviceClass": {
       "type": "string"
     },
@@ -36,8 +32,6 @@
     }
   },
   "required": [
-    "deviceID",
-    "deviceName",
-    "quantity"
+    "deviceID"
   ]
 }
