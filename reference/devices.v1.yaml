@@ -2,51 +2,13 @@ openapi: 3.0.0
 info:
   title: Devices
   version: '1.0'
-  description: |-
+  description: |+
     Interact with the `devices service` to get a list of registered devices, add or remove devices and updating existing records.
 
-    Use this API to leverage CloudHome's central repository of devices that will then allow users to manage home automation systems.
+    Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage home automation systems.
 
     Testing develop branch.
 
-    # Heading
-
-    Text attributes _italic_, *italic*, __bold__, **bold**, `monospace`.
-
-    Horizontal rule:
-
-    ---
-
-    Bullet list:
-
-      * apples
-      * oranges
-      * pears
-
-    Numbered list:
-
-      1. apples
-      2. oranges
-      3. pears
-
-    A [link](http://stoplight.io).
-
-    An image:
-    ![Stoplight logo](https://pbs.twimg.com/profile_images/641056907474538498/qIbg0pZP_bigger.png)
-
-    Code block:
-
-    ```
-    {
-      "message": "Hello, world!"
-    }
-    ```
-
-    Tables:
-
-    | Column1 | Column2 |
-    | ------- | --------|
-    | cell1   | cell2   |
   contact:
     name: Stephen Price
     url: 'https://www.linkedin.com/in/slprice/'
