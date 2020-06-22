@@ -69,14 +69,14 @@ paths:
         name: accountid
         in: path
         required: true
-        description: unique per account (see `My Account` for more information)
+        description: unique per account (see `'My Account'` for more information)
       - schema:
           type: string
           default: all
           example: seattle-office
         name: spaceid
         in: path
-        description: location associated with the devices (see `My Spaces` for more information)
+        description: location associated with the devices (see `'My Spaces'` for more information)
         required: true
 components:
   schemas: {}
