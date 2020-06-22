@@ -85,7 +85,7 @@ components:
       name: API Key
       type: apiKey
       in: header
-      description: Provided upon account registration (see 'My Account' for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
+      description: Provided upon account registration (see `'My Account'` for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
     HTTP Auth:
       type: http
       scheme: basic
