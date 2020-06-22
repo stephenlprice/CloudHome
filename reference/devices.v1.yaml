@@ -36,6 +36,12 @@ paths:
             application/json:
               schema:
                 $ref: ../models/devices.v1.json
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: 'https://apiguild.stoplight.io/api/v1/projects/apiguild/enterprise-schemas/nodes/error.v1.yaml?branch=master&deref=bundle'
       operationId: get-api-devices
       description: |-
         Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
