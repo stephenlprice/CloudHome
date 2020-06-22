@@ -29,7 +29,13 @@ paths:
       tags:
         - devices
         - IOT
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/devices.v1.json
       operationId: get-api-devices
       description: |-
         Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
