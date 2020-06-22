@@ -15,14 +15,10 @@
       "type": "string",
       "description": "user generated name"
     },
-    "quantity": {
-      "type": "integer",
-      "description": "amount of managed devices"
-    },
     "deviceClass": {
       "type": "string"
     },
-    "locationName": {
+    "spaceID": {
       "type": "string"
     },
     "alexaCompatible": {
@@ -36,8 +32,6 @@
     }
   },
   "required": [
-    "deviceID",
-    "deviceName",
-    "quantity"
+    "deviceID"
   ]
 }

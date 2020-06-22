@@ -23,13 +23,25 @@ servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
 paths:
-  '/api/devices/{accountid}/{locationid}':
+  '/api/devices/{accountid}/{spaceid}':
     get:
       summary: getDevices
       tags:
         - devices
         - IOT
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/devices.v1.json
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: 'https://apiguild.stoplight.io/api/v1/projects/apiguild/enterprise-schemas/nodes/error.v1.yaml?branch=master&deref=bundle'
       operationId: get-api-devices
       description: |-
         Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
@@ -63,14 +75,14 @@ paths:
         name: accountid
         in: path
         required: true
-        description: unique per account (see 'My Account' for more information)
+        description: unique per account (see `'My Account'` for more information)
       - schema:
           type: string
           default: all
           example: seattle-office
-        name: locationid
+        name: spaceid
         in: path
-        description: location associated with the devices (see 'My Locations' for more)
+        description: location associated with the devices (see `'My Spaces'` for more information)
         required: true
 components:
   schemas: {}
@@ -79,7 +91,7 @@ components:
       name: API Key
       type: apiKey
       in: header
-      description: Provided upon account registration (see 'My Account' for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
+      description: Provided upon account registration (see `'My Account'` for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
     HTTP Auth:
       type: http
       scheme: basic
@@ -115,3 +127,5 @@ components:
       type: openIdConnect
       openIdConnectUrl: 'https://cloudhome.io/auth/openid-configuration'
       description: ''
+security:
+  - CloudHome Key: []

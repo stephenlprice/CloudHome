@@ -1,0 +1,39 @@
+{
+  "title": "Spaces",
+  "type": "object",
+  "description": "CloudHome accounts can service multiple spaces allowing users to manage home automation devices at home, at work or anywhere in between.",
+  "properties": {
+    "spaceID": {
+      "type": "string"
+    },
+    "spaceName": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "long": {
+      "type": "number"
+    },
+    "spaceType": {
+      "type": "string"
+    },
+    "isPrimary": {
+      "type": "boolean"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "spaceID",
+    "isPrimary",
+    "country"
+  ]
+}
