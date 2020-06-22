@@ -115,3 +115,5 @@ components:
       type: openIdConnect
       openIdConnectUrl: 'https://cloudhome.io/auth/openid-configuration'
       description: ''
+security:
+  - CloudHome Key: []
