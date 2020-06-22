@@ -13,13 +13,26 @@
       "type": "string"
     },
     "createdOn": {
-      "type": "string"
+      "type": "string",
+      "description": "when the account was created"
     },
-    "uerCount": {
+    "userCount": {
       "type": "integer"
     },
-    "": {
-      "type": "string"
+    "deviceCount": {
+      "type": "integer"
+    },
+    "locationCount": {
+      "type": "integer"
+    },
+    "accountStorage": {
+      "type": "number"
+    },
+    "accountStorageUsed": {
+      "type": "number"
+    },
+    "vpnEnabled": {
+      "type": "boolean"
     }
   },
   "required": [
