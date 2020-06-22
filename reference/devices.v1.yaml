@@ -23,7 +23,7 @@ servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
 paths:
-  '/api/devices/{accountid}/{locationid}':
+  '/api/devices/{accountid}/{spaceid}':
     get:
       summary: getDevices
       tags:
@@ -74,9 +74,9 @@ paths:
           type: string
           default: all
           example: seattle-office
-        name: locationid
+        name: spaceid
         in: path
-        description: location associated with the devices (see 'My Locations' for more)
+        description: location associated with the devices (see 'My Spaces' for more information)
         required: true
 components:
   schemas: {}
