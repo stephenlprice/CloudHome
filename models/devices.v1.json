@@ -22,7 +22,7 @@
     "deviceClass": {
       "type": "string"
     },
-    "locationName": {
+    "spaceID": {
       "type": "string"
     },
     "alexaCompatible": {
