@@ -137,6 +137,30 @@ paths:
         - IOT
       responses: {}
       operationId: post-api-devices
+      description: |-
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs fa-pulse"></i> newDevice
+        </span>
+
+        Returns a list of devices for an account at a given location (or all locations if using the default value `'all'`).
+
+        Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
+      parameters:
+        - schema:
+            type: string
+            example: seattle-office
+            default: all
+          in: query
+          name: spaceid
+          description: location associated with the devices (see `'My Spaces'` for more information)
+        - schema:
+            type: string
+            default: newDevice
+            example: garageCamera
+          in: header
+          name: deviceName
+          description: name the new device. Devices in the same space require unique names or will be assigned the default name `'newDevice'`. CloudHome will assign a unique identifier if post is successful.
+          required: true
     put:
       summary: updateDevice
       tags:
