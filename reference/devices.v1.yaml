@@ -98,6 +98,8 @@ paths:
                       alexaCompatible: true
                       storageUsed: 0.003
                       storageFree: 1
+                      dateCreated: '2017-05-21T20:34:25+42:01'
+                      dateUpdated: '2018-01-29T20:36:30+00:00'
                     - deviceID: '456'
                       deviceName: thermostat
                       deviceClass: comfort
@@ -105,6 +107,8 @@ paths:
                       alexaCompatible: true
                       storageUsed: 0.025
                       storageFree: 1
+                      dateCreated: '2019-07-20T15:27:32+18:21'
+                      dateUpdated: '2020-03-01T22:13:24+00:03'
                     - deviceID: '789'
                       deviceName: sprinkler
                       deviceClass: convenience
@@ -112,6 +116,8 @@ paths:
                       alexaCompatible: false
                       storageUsed: 0.0018
                       storageFree: 1
+                      dateCreated: '2020-06-18T11:23:29+44:12'
+                      dateUpdated: '2020-06-18T11:23:29+44:12'
                 device:
                   value:
                     - deviceID: abc
@@ -121,6 +127,8 @@ paths:
                       alexaCompatible: true
                       storageUsed: 137
                       storageFree: 300
+                      dateCreated: '2019-07-20T15:27:32+18:21'
+                      dateUpdated: '2020-03-01T22:13:24+00:03'
         '400':
           description: Bad Request
           content:
