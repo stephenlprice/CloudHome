@@ -184,7 +184,9 @@ paths:
       tags:
         - devices
         - IOT
-      responses: {}
+      responses:
+        '201':
+          description: Created
       operationId: post-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
@@ -201,8 +203,10 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties: {}
+              type: array
+              items:
+                $ref: ../models/device.v1.json
+        description: 'The only required field to add a new device is `''deviceName''`, however if left empty it will default to `''newDevice''`. CloudHome assigns unique identifiers (`''deviceID''`) without user intervention. Additional information can be  updated by the user either through the service cloud interface or but using the `''PUT''` operation for this endpoint.'
     put:
       summary: updateDevice
       tags:
