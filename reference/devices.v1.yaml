@@ -31,7 +31,7 @@ info:
       },
       "headers": {
         "deviceid": "all",
-        "api key": "123abc",
+        "apiKey": "123abc",
         "Prefer": "code=200, example=devices"
       }
     }
