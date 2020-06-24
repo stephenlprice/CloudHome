@@ -23,9 +23,16 @@ info:
     ```json http
     {
       "method": "get",
-      "url": "https://cloudhome.io/api/devices/abc/home",
+      "url": "https://cloudhome.io/api/devices/xyz456",
+      "query": {
+        "spaceid": "all",
+        "sort": "desc",
+        "limit": "10"
+      },
       "headers": {
-        "API Key": "123"
+        "deviceid": "all",
+        "API Key": "123abc",
+        "Prefer": "code=200, example=devices"
       }
     }
     ```
@@ -44,8 +51,10 @@ info:
       }
     });
 
-    xhr.open("GET", "https://cloudhome.io/api/devices/abc/home");
-    xhr.setRequestHeader("api key", "123");
+    xhr.open("GET", "https://cloudhome.io/api/devices/xyz456?spaceid=all&sort=desc&limit=10");
+    xhr.setRequestHeader("deviceid", "all");
+    xhr.setRequestHeader("api key", "123abc");
+    xhr.setRequestHeader("prefer", "code=200, example=devices");
 
     xhr.send(data);
     ```
