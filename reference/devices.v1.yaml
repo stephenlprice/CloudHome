@@ -177,7 +177,7 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> getDevices
         </span>
 
-        Returns a list of devices for an account at a given space (or all locations if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
+        Returns a list of devices for an account at a given space (or all spaces if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
 
         If specific devices are desired, users can specify the `'deviceid'` or multiple thereof values in the header.
 
