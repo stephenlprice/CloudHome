@@ -76,7 +76,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/devices.v1.json
+                type: array
+                items:
+                  $ref: ../models/deviceFull.v1.json
         '400':
           description: Bad Request
           content:

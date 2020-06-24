@@ -1,11 +1,11 @@
 {
-  "title": "Devices",
+  "title": "Device",
   "type": "object",
   "x-tags": [
     "devices",
     "IOT"
   ],
-  "description": "Describes a class of devices activated on a CloudHome account. Each class can contain more than one deviced and location, centrally managed by CloudHome federated services.\n\nDevice identification, name and quantity are required fields.",
+  "description": "Describes a device activated on a CloudHome account. Each class can contain more than one device and location, centrally managed by the CloudHome service cloud.",
   "properties": {
     "deviceID": {
       "type": "string",

@@ -1,5 +1,5 @@
 {
-  "title": "Spaces",
+  "title": "Space",
   "type": "object",
   "description": "CloudHome accounts can service multiple spaces allowing users to manage home automation devices at home, at work or anywhere in between.",
   "properties": {

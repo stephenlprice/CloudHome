@@ -1,5 +1,5 @@
 {
-  "title": "Accounts",
+  "title": "Account",
   "type": "object",
   "description": "Users can belong to multiple accounts on CloudHome's federated services. In other words users have a unique id that can interact or manage devices on more than one account or location.",
   "properties": {
