@@ -119,9 +119,11 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> getDevices
         </span>
 
-        Returns a list of devices for an account at a given location (or all locations if using the default value `'all'`).
+        Returns a list of devices for an account at a given space (or all locations if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices.
 
-        Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
+        The response can be further defined by limiting the number of results or sorting them as required.
+
+        More information about required parameters and authentication can be seen below.
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/sort'
@@ -138,7 +140,7 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> newDevice
         </span>
 
-        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate and users must specify their `'accountid'` when posting new devices. Users are limited at posting _**10 devices per request**_, further quantities must be paginated.
+        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when posting new devices. Users are limited to posting _**10 devices per request**_, further quantities of devices must be paginated.
 
         More information about required parameters and authentication can be seen below.
       parameters:
