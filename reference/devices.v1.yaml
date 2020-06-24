@@ -18,8 +18,17 @@ info:
       <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to CloudHome</li>
     </ul>
 
-    Our documentation will provide everything you need to get started right away. Make requests to our endpoints or mock them:
+    Our documentation will provide everything you need to get started right away. Make requests to our endpoints or use the built-in mocks.
 
+    ```json http
+    {
+      "method": "get",
+      "url": "https://cloudhome.io/api/devices/abc/home",
+      "headers": {
+        "API Key": "123"
+      }
+    }
+    ```
 
     We also provide code generation to get your project started as soon as you imagine it!
 
