@@ -23,7 +23,7 @@ info:
     ```json http
     {
       "method": "get",
-      "url": "https://cloudhome.io/api/devices/123",
+      "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/123",
       "query": {
         "spaceid": "all",
         "sort": "desc",
@@ -36,6 +36,7 @@ info:
       }
     }
     ```
+    https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/{accountid}
 
     We also provide code generation to get your project started as soon as you imagine it!
 
