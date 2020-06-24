@@ -136,9 +136,9 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> newDevice
         </span>
 
-        Returns a list of devices for an account at a given location (or all locations if using the default value `'all'`).
+        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate and users must specify their `'accountid'` when posting new devices.
 
-        Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
+        More information about these requirements can be seen below.
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/deviceName'
@@ -228,3 +228,12 @@ components:
       description: ''
 security:
   - CloudHome Key: []
+tags:
+  - name: devices
+    description: relative to device management
+    externalDocs:
+      url: 'https://cloudhome.io/api/tags/devices'
+  - name: IOT
+    description: relative to devices and the 'internet of things'
+    externalDocs:
+      url: 'https://cloudhome.io/api/tags/IOT'
