@@ -332,6 +332,14 @@ paths:
         - IOT
       responses: {}
       operationId: delete-api-devices
+      description: |-
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs fa-pulse"></i> removeDevice
+        </span>
+
+        Delete devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when deleting devices. Users are limited to deleting _**1 device per request**_ by specifying a `'deviceid'`, further device removal must be paginated.
+
+        More information about required parameters and authentication can be seen below.
     parameters:
       - $ref: '#/components/parameters/accountid'
 components:
