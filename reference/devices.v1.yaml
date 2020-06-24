@@ -18,9 +18,27 @@ info:
       <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to CloudHome</li>
     </ul>
 
+    Our documentation will provide everything you need to get started right away. Make requests to our endpoints or mock them:
+
+
+    We also provide code generation to get your project started as soon as you imagine it!
+
     ```javascript
-    var s = "JavaScript syntax highlighting";
-    alert(s);
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+      }
+    });
+
+    xhr.open("GET", "https://cloudhome.io/api/devices/abc/home");
+    xhr.setRequestHeader("api key", "123");
+
+    xhr.send(data);
     ```
 
     <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
