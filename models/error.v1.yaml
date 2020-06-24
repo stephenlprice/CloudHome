@@ -1,0 +1,18 @@
+title: Error
+type: object
+x-tags:
+  - IOT
+properties:
+  code:
+    type: integer
+    format: int32
+    example: 404
+    description: 'status code as defined by the [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.ietf.org/assignments/http-status-codes/http-status-codes.xml)'
+  message:
+    type: string
+    example: Not Found
+    description: 'status code description as defined by the [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.ietf.org/assignments/http-status-codes/http-status-codes.xml)'
+required:
+  - code
+  - message
+description: Standard status response schema for errors.
