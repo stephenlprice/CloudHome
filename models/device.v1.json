@@ -6,6 +6,37 @@
     "IOT"
   ],
   "description": "Describes a device activated on a CloudHome account. Each class can contain more than one device and location, centrally managed by the CloudHome service cloud.",
+  "x-examples": {
+    "devices": [
+      {
+        "deviceID": 123,
+        "deviceName": "frontDoorLock",
+        "deviceClass": "safety",
+        "spaceID": "home",
+        "alexaCompatible": true,
+        "storageUsed": "0.003",
+        "storageFree": "1"
+      },
+      {
+        "deviceID": 456,
+        "deviceName": "thermostat",
+        "deviceClass": "comfort",
+        "spaceID": "home",
+        "alexaCompatible": true,
+        "storageUsed": "0.025",
+        "storageFree": "1"
+      },
+      {
+        "deviceID": 789,
+        "deviceName": "sprinkler",
+        "deviceClass": "convenience",
+        "spaceID": "yard",
+        "alexaCompatible": false,
+        "storageUsed": "0.0018",
+        "storageFree": "1"
+      }
+    ]
+  },
   "properties": {
     "deviceID": {
       "type": "string",
@@ -25,10 +56,12 @@
       "type": "boolean"
     },
     "storageUsed": {
-      "type": "number"
+      "type": "number",
+      "description": "in gigabytes as described in this [data measurement chart](http://www.wu.ece.ufl.edu/links/dataRate/DataMeasurementChart.html)\n"
     },
     "storageFree": {
-      "type": "number"
+      "type": "number",
+      "description": "in gigabytes as described in this [data measurement chart](http://www.wu.ece.ufl.edu/links/dataRate/DataMeasurementChart.html)"
     }
   },
   "required": [
