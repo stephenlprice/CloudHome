@@ -123,13 +123,7 @@ paths:
 
         Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
       parameters:
-        - schema:
-            type: string
-            example: seattle-office
-            default: all
-          in: query
-          name: spaceid
-          description: location associated with the devices (see `'My Spaces'` for more information)
+        - $ref: '#/components/parameters/spaceid'
     post:
       summary: newDevice
       tags:
@@ -146,21 +140,8 @@ paths:
 
         Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
       parameters:
-        - schema:
-            type: string
-            example: seattle-office
-            default: all
-          in: query
-          name: spaceid
-          description: location associated with the devices (see `'My Spaces'` for more information)
-        - schema:
-            type: string
-            default: newDevice
-            example: garageCamera
-          in: header
-          name: deviceName
-          description: name the new device. Devices in the same space require unique names or will be assigned the default name `'newDevice'`. CloudHome will assign a unique identifier if post is successful.
-          required: true
+        - $ref: '#/components/parameters/spaceid'
+        - $ref: '#/components/parameters/deviceName'
     put:
       summary: updateDevice
       tags:
@@ -185,6 +166,23 @@ paths:
         description: unique per account (see `'My Account'` for more information)
 components:
   schemas: {}
+  parameters:
+    spaceid:
+      schema:
+        type: string
+        example: seattle-office
+        default: all
+      in: query
+      name: spaceid
+      description: location associated with the devices (see `'My Spaces'` for more information)
+    deviceName:
+      schema:
+        type: string
+        default: newDevice
+        example: garageCamera
+      in: header
+      name: deviceName
+      description: name the new device. Devices in the same space require unique names or will be assigned the default name `'newDevice'`. CloudHome will assign a unique identifier if post is successful.
   securitySchemes:
     CloudHome Key:
       name: API Key
