@@ -56,7 +56,7 @@ info:
       "headers": {
         "deviceid": "all",
         "apiKey": "123",
-        "Prefer": "code=200, example=devices"
+        "Prefer": "code=200, example=device"
       }
     }
     ```
