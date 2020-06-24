@@ -121,15 +121,16 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> getDevices
         </span>
 
-        Returns a list of devices for an account at a given space (or all locations if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices.
+        Returns a list of devices for an account at a given space (or all locations if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
 
-        The response can be further defined by limiting the number of results or sorting them as required.
+        If a single device is desired, users can specify the `'deviceid'` or multiple values in the header.
 
         More information about required parameters and authentication can be seen below.
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/sort'
         - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/deviceName'
     post:
       summary: newDevice
       tags:
@@ -148,6 +149,12 @@ paths:
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/deviceName'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
     put:
       summary: updateDevice
       tags:
@@ -191,7 +198,16 @@ components:
         example: garageCamera
       in: header
       name: deviceName
-      description: name the new device. Devices in the same space require unique names or will be assigned the default name `'newDevice'`. CloudHome will assign a unique identifier if post is successful.
+      description: devices in the same space require unique names or will be assigned the default name `'newDevice'`
+      allowEmptyValue: true
+    deviceid:
+      schema:
+        type: string
+        default: all
+        example: 123abc
+      in: header
+      name: deviceName
+      description: unique identifiers for devices registered on the service cloud
       allowEmptyValue: true
     sort:
       schema:
