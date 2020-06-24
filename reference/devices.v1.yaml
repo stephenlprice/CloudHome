@@ -85,7 +85,11 @@ paths:
                 $ref: 'https://apiguild.stoplight.io/api/v1/projects/apiguild/enterprise-schemas/nodes/error.v1.yaml?branch=master&deref=bundle'
       operationId: get-api-devices
       description: |-
-        Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs fa-pulse"></i> getDevices
+        </span>
+
+        Returns a list of devices for an account at a given location (or all locations if using the default value `'all'`).
 
         Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
     post:
