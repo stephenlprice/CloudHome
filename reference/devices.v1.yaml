@@ -43,7 +43,7 @@ info:
     <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
     __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
 
-    With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and CloudHome Key, else feel free to use the built-in mock server for free!
+    With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, else feel free to use the built-in mock server for free!
 
     ```json http
     {
