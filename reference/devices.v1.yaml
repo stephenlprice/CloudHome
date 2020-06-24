@@ -124,6 +124,7 @@ paths:
         Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
       parameters:
         - $ref: '#/components/parameters/spaceid'
+        - $ref: '#/components/parameters/sort'
     post:
       summary: newDevice
       tags:
@@ -187,6 +188,18 @@ components:
       name: deviceName
       description: name the new device. Devices in the same space require unique names or will be assigned the default name `'newDevice'`. CloudHome will assign a unique identifier if post is successful.
       allowEmptyValue: true
+    sort:
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: desc
+        example: asc
+      in: query
+      name: sort
+      allowEmptyValue: true
+      description: will sort objects returned from the request
   securitySchemes:
     CloudHome Key:
       name: API Key
