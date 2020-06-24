@@ -136,9 +136,9 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> newDevice
         </span>
 
-        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate and users must specify their `'accountid'` when posting new devices.
+        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate and users must specify their `'accountid'` when posting new devices. Users are limited at posting _**10 devices per request**_, further quantities must be paginated.
 
-        More information about these requirements can be seen below.
+        More information about required parameters and authentication can be seen below.
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/deviceName'
