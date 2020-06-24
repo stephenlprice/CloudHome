@@ -4,7 +4,7 @@ info:
   version: '1.0'
   description: |-
     <span style="font-size: 3em; color: #49fcd4;">
-      <i class="fas fa-robot"></i>
+      <i class="fas fa-robot fa-2x"></i>
     </span> 
 
     Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
