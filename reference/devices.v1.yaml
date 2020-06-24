@@ -123,7 +123,7 @@ paths:
 
         Returns a list of devices for an account at a given space (or all locations if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
 
-        If a single device is desired, users can specify the `'deviceid'` or multiple values in the header.
+        If specific devices are desired, users can specify the `'deviceid'` or multiple thereof values in the header.
 
         More information about required parameters and authentication can be seen below.
       parameters:
@@ -207,7 +207,7 @@ components:
         example: 123abc
       in: header
       name: deviceid
-      description: unique identifiers for devices registered on the service cloud, when empty it defaults to `'all'`
+      description: 'unique identifiers for devices registered on the service cloud, when empty it defaults to `''all''`'
       allowEmptyValue: true
       required: true
     sort:
