@@ -207,7 +207,7 @@ components:
         example: 123abc
       in: header
       name: deviceid
-      description: unique identifiers for devices registered on the service cloud, default value is `'all'`
+      description: unique identifiers for devices registered on the service cloud, when empty it defaults to `'all'`
       allowEmptyValue: true
       required: true
     sort:
