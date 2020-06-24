@@ -125,6 +125,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/limit'
     post:
       summary: newDevice
       tags:
@@ -200,6 +201,18 @@ components:
       name: sort
       allowEmptyValue: true
       description: will sort objects returned from the request
+    limit:
+      schema:
+        type: integer
+        default: 10
+        format: int32
+        example: 15
+        maximum: 25
+        minimum: 1
+      in: query
+      name: limit
+      allowEmptyValue: true
+      description: specify the number of results returned from the request
   securitySchemes:
     CloudHome Key:
       name: API Key
