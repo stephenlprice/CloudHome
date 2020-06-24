@@ -15,7 +15,7 @@ info:
       <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
       <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
       <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
-      <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to CloudHome</li>
+      <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
     </ul>
 
     Our documentation will provide everything you need to get started right away. Make requests to our endpoints or use the built-in mocks.
