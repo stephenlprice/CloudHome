@@ -35,7 +35,6 @@ info:
     xhr.open("GET", "https://cloudhome.io/api/devices/123?spaceid=all&sort=desc&limit=10");
     xhr.setRequestHeader("deviceid", "all");
     xhr.setRequestHeader("apikey", "123");
-    xhr.setRequestHeader("prefer", "code=200, example=devices");
 
     xhr.send(data);
     ```
