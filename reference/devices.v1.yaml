@@ -130,7 +130,7 @@ paths:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/sort'
         - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/deviceName'
+        - $ref: '#/components/parameters/deviceid'
     post:
       summary: newDevice
       tags:
@@ -206,7 +206,7 @@ components:
         default: all
         example: 123abc
       in: header
-      name: deviceName
+      name: deviceid
       description: unique identifiers for devices registered on the service cloud
       allowEmptyValue: true
     sort:
