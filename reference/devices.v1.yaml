@@ -330,7 +330,6 @@ paths:
       tags:
         - devices
         - IOT
-      responses: {}
       operationId: delete-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
@@ -349,6 +348,55 @@ paths:
             schema:
               $ref: ../models/device.v1.json
         description: 'The only field required by this operation is `''deviceid''`, however if left empty it will default to `''all''`. Such a request will result in error code `''400 Bad Request''` as this operation only allows deleting one device per request.'
+      responses:
+        '200':
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
     parameters:
       - $ref: '#/components/parameters/accountid'
 components:
