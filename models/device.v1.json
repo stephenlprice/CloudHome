@@ -5,7 +5,7 @@
     "devices",
     "IOT"
   ],
-  "description": "Describes a device activated on a CloudHome account. Each class can contain more than one device and location, centrally managed by the CloudHome service cloud.",
+  "description": "Describes a device activated on a **CloudHome** account. Each class can contain more than one device and location, centrally managed by the CloudHome service cloud.",
   "x-examples": {
     "devices": [
       {

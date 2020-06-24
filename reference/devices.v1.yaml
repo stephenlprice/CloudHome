@@ -261,9 +261,18 @@ paths:
           <i class="fas fa-robot fa-xs fa-pulse"></i> updateDevice
         </span>
 
-        Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_, further device updates must be paginated.
+        Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_ by specifying a `'deviceid'`, further device updates must be paginated.
 
         More information about required parameters and authentication can be seen below.
+      parameters:
+        - $ref: '#/components/parameters/deviceid'
+        - $ref: '#/components/parameters/spaceid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/device.v1.json
+        description: ''
     delete:
       summary: removeDevice
       tags:
