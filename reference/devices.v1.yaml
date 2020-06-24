@@ -272,7 +272,7 @@ paths:
           application/json:
             schema:
               $ref: ../models/device.v1.json
-        description: ''
+        description: 'Beside the fields the user wishes to update, the only field required by this operation is `''deviceid''`, however if left empty it will default to `''all''`. Such a request will result in error code `''400 Bad Request''` as this operation only allows updating one device per request.'
     delete:
       summary: removeDevice
       tags:
