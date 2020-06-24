@@ -9,7 +9,7 @@ info:
 
     Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
 
-    Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage home automation systems.
+    Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage automation systems at home, at work or on the go.
 
     <ul class="fa-ul" style="padding:20px;">
       <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
