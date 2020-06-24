@@ -19,5 +19,9 @@
   "required": [
     "deviceID",
     "geolocation"
+  ],
+  "x-tags": [
+    "IOT",
+    "devices"
   ]
 }

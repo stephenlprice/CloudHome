@@ -35,5 +35,9 @@
     "spaceID",
     "isPrimary",
     "country"
+  ],
+  "x-tags": [
+    "IOT",
+    "devices"
   ]
 }
