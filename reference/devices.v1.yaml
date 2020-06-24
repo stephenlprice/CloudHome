@@ -18,27 +18,7 @@ info:
       <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
     </ul>
 
-    Our documentation will provide everything you need to get started right away. Make requests to our endpoints or use the built-in mocks.
-
-    ```json http
-    {
-      "method": "get",
-      "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/123",
-      "query": {
-        "spaceid": "all",
-        "sort": "desc",
-        "limit": "10"
-      },
-      "headers": {
-        "deviceid": "all",
-        "apiKey": "123",
-        "Prefer": "code=200, example=devices"
-      }
-    }
-    ```
-    https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/{accountid}
-
-    We also provide code generation to get your project started as soon as you imagine it!
+    CloudHome's API documentation provides code generation to get your project started as soon as you imagine it!
 
     ```javascript
     var data = null;
@@ -62,6 +42,25 @@ info:
 
     <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
     __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
+
+    With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and CloudHome Key, else feel free to use the built-in mock server for free!
+
+    ```json http
+    {
+      "method": "get",
+      "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/123",
+      "query": {
+        "spaceid": "all",
+        "sort": "desc",
+        "limit": "10"
+      },
+      "headers": {
+        "deviceid": "all",
+        "apiKey": "123",
+        "Prefer": "code=200, example=devices"
+      }
+    }
+    ```
   contact:
     name: Stephen Price
     url: 'https://www.linkedin.com/in/slprice/'
