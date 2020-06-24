@@ -187,6 +187,10 @@ paths:
       responses:
         '201':
           description: Created
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
         '400':
           description: Bad Request
           content:
