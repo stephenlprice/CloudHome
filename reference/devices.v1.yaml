@@ -11,7 +11,7 @@ info:
 
     Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage automation systems at home, at work or on the go.
 
-    <ul class="fa-ul" style="padding:20px;">
+    <ul class="fa-ul" style="padding-top:20px;">
       <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
       <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
       <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
@@ -22,6 +22,9 @@ info:
     var s = "JavaScript syntax highlighting";
     alert(s);
     ```
+
+    <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
+    __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
   contact:
     name: Stephen Price
     url: 'https://www.linkedin.com/in/slprice/'
