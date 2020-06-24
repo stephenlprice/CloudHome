@@ -18,7 +18,7 @@ info:
       <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
     </ul>
 
-    CloudHome's API documentation provides code generation to get your project started as soon as you imagine it!
+    **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
 
     ```javascript
     var data = null;
