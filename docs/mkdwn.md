@@ -6,6 +6,8 @@ Horizontal rule:
 
 ---
 
+<i class="fas fa-robot"></i>
+
 Bullet list:
 
   * apples

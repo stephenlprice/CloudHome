@@ -3,6 +3,10 @@ info:
   title: Devices
   version: '1.0'
   description: |-
+    <span style="font-size: 3em; color: Tomato;">
+      <i class="fas fa-robot"></i>
+    </span> 
+
     Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
 
     Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage home automation systems.
