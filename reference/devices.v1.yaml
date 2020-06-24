@@ -64,7 +64,7 @@ servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
 paths:
-  '/api/devices/{accountid}/{spaceid}':
+  '/api/devices/{accountid}':
     get:
       summary: getDevices
       tags:
@@ -122,6 +122,14 @@ paths:
         Returns a list of devices for an account at a given location (or all locations if using the default value `'all'`).
 
         Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
+      parameters:
+        - schema:
+            type: string
+            example: seattle-office
+            default: all
+          in: query
+          name: spaceid
+          description: location associated with the devices (see `'My Spaces'` for more information)
     post:
       summary: newDevice
       tags:
@@ -151,14 +159,6 @@ paths:
         in: path
         required: true
         description: unique per account (see `'My Account'` for more information)
-      - schema:
-          type: string
-          default: all
-          example: seattle-office
-        name: spaceid
-        in: path
-        description: location associated with the devices (see `'My Spaces'` for more information)
-        required: true
 components:
   schemas: {}
   securitySchemes:
