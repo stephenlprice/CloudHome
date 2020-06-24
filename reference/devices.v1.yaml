@@ -84,37 +84,37 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
         '401':
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
         '500':
           description: Internal Server Error
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
         '502':
           description: Bad Gateway
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
         '504':
           description: Gateway Timeout
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/API%20Guild/enterprise-schemas/nodes%2Ferror.yaml?deref=bundle'
+                $ref: ../models/error.v1.yaml
       operationId: get-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
