@@ -1,4 +1,4 @@
-# Welcome to CloudHomes APIs
+# CloudHomes APIs
 
 <span style="font-size: 3em; color: #5D535E;">
   <i class="fas fa-robot fa-2x"></i>
@@ -6,7 +6,7 @@
 
 Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
 
-Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage automation systems at home, at work or on the go.
+Use this API to leverage __*CloudHome*__'s central repository of devices that allows users to manage automation systems at home, at work or on the go.
 </br>
 <ul class="fa-ul">
   <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
@@ -14,6 +14,8 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that wi
   <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
   <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
 </ul>
+
+### Code Generation
 
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
 
@@ -37,8 +39,10 @@ xhr.send(data);
 ```
 
 <i class="fas fa-quote-left fa-2x fa-pull-left" style="margin-bottom:1px;">__*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.</i>
-</br>
-With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, if you are not an existing customer you can use the built-in mock server for free!
+
+### Interactive Documentation
+
+With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, if you are not an existing customer you can use the built-in mock server for free! Click send in example to get a sample mocked response:
 
 ```json http
 {
@@ -56,11 +60,12 @@ With the `'Try It!'` functionality you can send requests directly to our servers
   }
 }
 ```
-If you want to learn more about the data models used by our `APIs`, you can find them at the bottom of this page. Here is an example:
+### Data Models
 
+If you want to learn more about the data models used by our `APIs`, you can find them at the bottom of this page. Here is an example:
+</br>
 
 ```json json_schema
-{
 {
   "title": "Device",
   "type": "object",
