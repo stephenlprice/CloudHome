@@ -1,8 +1,8 @@
 # Welcome!
 </br>
 <span style="font-size: 3em; color: #5D535E;">
-  <i class="fas fa-robot fa-2x"></i> CloudHome
-</span> 
+  <i class="fas fa-robot fa-2x"></i> <i>CloudHome
+</i></span> 
 
 Interact with the `'Devices'` API to get a list of registered devices, add or remove devices and to update existing records.
 
