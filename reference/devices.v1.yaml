@@ -10,56 +10,6 @@ info:
     Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
 
     Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage automation systems at home, at work or on the go.
-
-    <ul class="fa-ul" style="padding-top:20px;">
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
-      <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
-      <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
-    </ul>
-
-    **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
-
-    ```javascript
-    var data = null;
-
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-
-    xhr.addEventListener("readystatechange", function () {
-      if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-      }
-    });
-
-    xhr.open("GET", "https://cloudhome.io/api/devices/123?spaceid=all&sort=desc&limit=10");
-    xhr.setRequestHeader("deviceid", "all");
-    xhr.setRequestHeader("apikey", "123");
-
-    xhr.send(data);
-    ```
-
-    <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
-    __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
-
-    With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, if you are not an existing customer you can use the built-in mock server for free!
-
-    ```json http
-    {
-      "method": "get",
-      "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/123",
-      "query": {
-        "spaceid": "all",
-        "sort": "desc",
-        "limit": "10"
-      },
-      "headers": {
-        "deviceid": "all",
-        "apiKey": "123",
-        "Prefer": "code=200, example=device"
-      }
-    }
-    ```
   contact:
     name: Stephen Price
     url: 'https://www.linkedin.com/in/slprice/'
