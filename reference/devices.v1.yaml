@@ -3,12 +3,6 @@ info:
   title: Devices
   version: '1.0'
   description: |-
-    <span style="font-size: 3em; color: #5D535E;">
-      <i class="fas fa-robot fa-2x"></i> <i>CloudHome
-    </i></span> 
-    </br>
-    </br>
-
     Interact with the `'Devices'` API to get a list of registered devices, add or remove devices and to update existing records.
 
     Use this API to leverage __*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
@@ -124,10 +118,6 @@ paths:
                 $ref: ../models/error.v1.yaml
       operationId: get-api-devices
       description: |-
-        <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs fa-pulse"></i> getDevices
-        </span>
-
         Returns a list of devices for an account at a given space (or all spaces if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
 
         If specific devices are desired, users can specify the `'deviceid'` or multiple thereof values in the header.
@@ -194,10 +184,6 @@ paths:
                 $ref: ../models/error.v1.yaml
       operationId: post-api-devices
       description: |-
-        <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs fa-pulse"></i> newDevice
-        </span>
-
         Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when posting new devices. Users are limited to posting _**10 devices per request**_, further quantities of devices must be paginated.
 
         More information about required parameters and authentication can be seen below.
@@ -211,7 +197,7 @@ paths:
               type: array
               items:
                 $ref: ../models/device.v1.json
-        description: 'The only required field to add a new device is `''deviceName''`, however if left empty it will default to `''newDevice''`. CloudHome assigns unique identifiers (`''deviceID''`) without user intervention. Additional information can be  updated by the user either through the service cloud interface or but using the `''PUT''` operation for this endpoint.'
+        description: "The only required field to add a new device is `'deviceName'`, however if left empty it will default to `'newDevice'`. CloudHome assigns unique identifiers (`'deviceID'`) without user intervention. Additional information can be  updated by the user either through the service cloud interface or but using the `'PUT'` operation for this endpoint."
     put:
       summary: updateDevice
       tags:
@@ -268,10 +254,6 @@ paths:
                 $ref: ../models/error.v1.yaml
       operationId: put-api-devices
       description: |-
-        <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs fa-pulse"></i> updateDevice
-        </span>
-
         Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_ by specifying a `'deviceid'`, further device updates must be paginated.
 
         More information about required parameters and authentication can be seen below.
@@ -283,7 +265,7 @@ paths:
           application/json:
             schema:
               $ref: ../models/device.v1.json
-        description: 'Beside the fields the user wishes to update, the only field required by this operation is `''deviceid''`, however if left empty it will default to `''all''`. Such a request will result in error code `''400 Bad Request''` as this operation only allows updating one device per request.'
+        description: "Beside the fields the user wishes to update, the only field required by this operation is `'deviceid'`, however if left empty it will default to `'all'`. Such a request will result in error code `'400 Bad Request'` as this operation only allows updating one device per request."
     delete:
       summary: removeDevice
       tags:
@@ -291,10 +273,6 @@ paths:
         - IOT
       operationId: delete-api-devices
       description: |-
-        <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs fa-pulse"></i> removeDevice
-        </span>
-
         Delete devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when deleting devices. Users are limited to deleting _**1 device per request**_ by specifying a `'deviceid'`, further device removal must be paginated.
 
         More information about required parameters and authentication can be seen below.
@@ -306,7 +284,7 @@ paths:
           application/json:
             schema:
               $ref: ../models/device.v1.json
-        description: 'The only field required by this operation is `''deviceid''`, however if left empty it will default to `''all''`. Such a request will result in error code `''400 Bad Request''` as this operation only allows deleting one device per request.'
+        description: "The only field required by this operation is `'deviceid'`, however if left empty it will default to `'all'`. Such a request will result in error code `'400 Bad Request'` as this operation only allows deleting one device per request."
       responses:
         '200':
           description: Deleted
@@ -368,7 +346,7 @@ components:
       name: accountid
       in: path
       required: true
-      description: unique per account (see `'My Account'` for more information)
+      description: "unique per account (see `'My Account'` for more information)"
     spaceid:
       schema:
         type: string
@@ -376,7 +354,7 @@ components:
         default: all
       in: query
       name: spaceid
-      description: location associated with the devices (see `'My Spaces'` for more information)
+      description: "location associated with the devices (see `'My Spaces'` for more information)"
       allowEmptyValue: true
     deviceName:
       schema:
@@ -385,7 +363,7 @@ components:
         example: garageCamera
       in: header
       name: deviceName
-      description: devices in the same space require unique names or will be assigned the default name `'newDevice'`
+      description: "devices in the same space require unique names or will be assigned the default name `'newDevice'`"
       allowEmptyValue: true
     deviceid:
       schema:
@@ -394,7 +372,7 @@ components:
         example: 123abc
       in: header
       name: deviceid
-      description: 'unique identifiers for devices registered on the service cloud, when empty it defaults to `''all''`'
+      description: "unique identifiers for devices registered on the service cloud, when empty it defaults to `'all'`"
       allowEmptyValue: true
       required: true
     sort:
@@ -426,7 +404,7 @@ components:
       name: apiKey
       type: apiKey
       in: header
-      description: Provided upon account registration (see `'My Account'` for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
+      description: "Provided upon account registration (see `'My Account'` for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account."
     HTTP Auth:
       type: http
       scheme: basic
@@ -457,7 +435,7 @@ components:
             'devices:delete': Delete your devices
             'locations:delete': Delete your locations
             'users:delete': Delete your users
-      description: 'OAuth 2 as per [RFC-6749](https://tools.ietf.org/html/rfc6749). OAuth2 is a protocol that lets external apps request authorization to private details in a user''s CloudHome account without getting their password. This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.'
+      description: "OAuth 2 as per [RFC-6749](https://tools.ietf.org/html/rfc6749). OAuth2 is a protocol that lets external apps request authorization to private details in a user's CloudHome account without getting their password. This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time."
     OpenID Connect:
       type: openIdConnect
       openIdConnectUrl: 'https://cloudhome.io/auth/openid-configuration'
@@ -470,6 +448,6 @@ tags:
     externalDocs:
       url: 'https://cloudhome.io/api/tags/devices'
   - name: IOT
-    description: relative to devices and the 'internet of things'
+    description: "relative to devices and the 'internet of things'"
     externalDocs:
       url: 'https://cloudhome.io/api/tags/IOT'
