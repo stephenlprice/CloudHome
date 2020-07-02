@@ -40,9 +40,8 @@ xhr.setRequestHeader("apikey", "123");
 
 xhr.send(data);
 ```
+> __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
 
-<i class="fas fa-quote-left fa-2x fa-pull-left" style="margin-bottom:1px;">__*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.</i>
-</br>
 ### Interactive Documentation
 
 With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, if you are not an existing customer you can use the built-in mock server for free! Click `'Send'` in the embedded _**Request Maker**_ below to get a sample mocked response:
