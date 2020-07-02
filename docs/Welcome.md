@@ -10,7 +10,7 @@ Interact with the `'Devices'` API to get a list of registered devices, add or re
 
 Use this API to leverage __*CloudHome*__'s central repository of devices that allows users to manage automation systems at home, at work or on the go.
 </br>
-<ul class="fa-ul">
+<ul class="fa-ul" style="list-style-type:none;">
   <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
   <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
   <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
