@@ -16,7 +16,6 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
   <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
   <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
 </ul>
-</br>
 
 ### Code Generation
 
