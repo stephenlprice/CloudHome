@@ -64,7 +64,7 @@ With the `'Try It!'` functionality you can send requests directly to our servers
 
 ### Data Models
 
-If you want to learn more about the data models used by our `APIs`, you can find them at the bottom of this page. Here is an example:
+If you want to learn more about the data models used by our `APIs`, you can find them at the bottom of the left-hand navigation. Here is an example:
 </br>
 
 ```json json_schema
