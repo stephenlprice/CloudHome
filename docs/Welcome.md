@@ -17,8 +17,6 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
   <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
 </ul>
 
-<p><a href = "mailto:api@cloudhome.io?subject = API Feedback&body = Share Your Fedback" style="background-color: #3C5A9A; padding: 5px 10px 5px 10px; border-style: solid; border-radius: 12px; border-color: #3C5A9A; color: #ffffff;" onClick="feedbacklink();">Send us feedback!</a></p>
-
 ### Code Generation
 
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
@@ -164,3 +162,6 @@ If you want to learn more about the data models used by our `APIs`, you can find
   ]
 }
 ```
+</br>
+
+<p style="margin-top: 2em; text-align: center"><a href = "mailto:api@cloudhome.io?subject=Feedback&body=Message" style="background-color: #3C5A9A; padding: 5px 10px 5px 10px; border-style: solid; border-radius: 12px; border-color: #3C5A9A; color: #ffffff;" onClick="feedbacklink();">Send us feedback!</a></p>
