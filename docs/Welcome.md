@@ -17,8 +17,6 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
   <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
 </ul>
 
-</br>
-
 ### Code Generation
 
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
