@@ -166,4 +166,4 @@ If you want to learn more about the data models used by our `APIs`, you can find
 ```
 </br>
 
-<p style="margin-top: 2em; text-align: center"><a href = "mailto:api@cloudhome.io?subject=Feedback&body=Message" style="background-color: #3C5A9A; padding: 5px 10px 5px 10px; border-style: solid; border-radius: 12px; border-color: #3C5A9A; color: #ffffff;" target="_blank">Send us feedback!</a></p>
+<p style="margin-top: 2em; text-align: center"><a href="mailto:api@cloudhome.io?subject=Feedback&body=Message" target="_blank" style="background-color: #3C5A9A; padding: 5px 10px 5px 10px; border-style: solid; border-radius: 12px; border-color: #3C5A9A; color: #ffffff;">Send us feedback!</a></p>
