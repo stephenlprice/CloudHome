@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: testAPI
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/users/{userID}':
+    get:
+      summary: listUsers
+      tags: []
+      responses: {}
+      operationId: get-users
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: limit
+        - schema:
+            type: string
+          in: query
+          name: sort
+        - schema:
+            type: string
+          in: header
+          name: accountID
+    parameters:
+      - schema:
+          type: string
+        name: userID
+        in: path
+        required: true
+components:
+  schemas: {}
