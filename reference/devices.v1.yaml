@@ -14,8 +14,8 @@ info:
     Use this API to leverage __*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
   contact:
     name: Stephen Price
-    url: 'https://www.linkedin.com/in/slprice/'
-    email: stephen@stoplight.io
+    email: api@cloudhome.io
+    url: cloudhome.io
   termsOfService: cloudhome.io/api/devices/terms
   license:
     name: MIT
