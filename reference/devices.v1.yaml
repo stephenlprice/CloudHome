@@ -364,7 +364,8 @@ components:
     accountid:
       schema:
         type: string
-        example: jetsonsFutureHome
+        example: myoffice
+        default: jetsonsFutureHome
       name: accountid
       in: path
       required: true
