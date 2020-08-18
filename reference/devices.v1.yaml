@@ -211,6 +211,12 @@ paths:
             application/json:
               schema:
                 $ref: ../models/responseCode.v1.yaml
+        'default':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
       operationId: post-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
@@ -287,6 +293,12 @@ paths:
                 $ref: ../models/responseCode.v1.yaml
         '504':
           description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        'default':
+          description: Error
           content:
             application/json:
               schema:
