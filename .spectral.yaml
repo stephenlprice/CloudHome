@@ -362,7 +362,7 @@ rules:
         match: '/^https:/'
   oas3-response-success-hal:
     description: All success responses MUST be of media type `application/hal+json`
-    severity: error
+    severity: 'off'
     given: '$.paths..responses[?( @property >= 200 && @property < 300 && @property != 204)].content[*]~'
     recommended: true
     formats:
@@ -373,7 +373,7 @@ rules:
       functionOptions:
         values:
           - application/hal+json
-  operation-singular-tag: info
+  operation-singular-tag: hint
   tag-description: hint
   operation-default-response: info
   openapi-tags-alphabetical: hint
