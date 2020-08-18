@@ -37,7 +37,6 @@ paths:
       summary: getDevices
       tags:
         - devices
-        - IOT
       responses:
         '200':
           description: OK
@@ -157,7 +156,6 @@ paths:
       summary: newDevice
       tags:
         - devices
-        - IOT
       responses:
         '201':
           description: Created
@@ -238,7 +236,6 @@ paths:
       summary: updateDevice
       tags:
         - devices
-        - IOT
       responses:
         '201':
           description: Created
