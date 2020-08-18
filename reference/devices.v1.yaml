@@ -436,7 +436,7 @@ components:
         default: newDevice
         example: garageCamera
       in: header
-      name: deviceName
+      name: Device-Name
       description: devices in the same space require unique names or will be assigned the default name `'newDevice'`
       allowEmptyValue: true
     deviceid:

@@ -362,17 +362,17 @@ rules:
         match: '/^https:/'
   oas3-response-success-hal:
     description: All success responses MUST be of media type `application/hal+json`
-    severity: 'off'
+    severity: error
     given: '$.paths..responses[?( @property >= 200 && @property < 300 && @property != 204)].content[*]~'
     recommended: true
     formats:
       - oas3
-    message: 'Response documents MUST be of application/hal+json media type: {{error}}'
+    message: 'Response documents MUST be of application/json media type: {{error}}'
     then:
       function: enumeration
       functionOptions:
         values:
-          - application/hal+json
+          - application/json
   operation-singular-tag: hint
   tag-description: hint
   operation-default-response: info
