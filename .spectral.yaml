@@ -117,14 +117,14 @@ rules:
       function: pattern
       functionOptions:
         match: '/^https:/'
-  oas3-request-support-json:
-    description: Every request SHOULD support `application/json` media type
+  oas3-request-support-xml:
+    description: Every request SHOULD support `application/xml` media type
     formats:
       - oas3
     recommended: true
     severity: warn
     message: '{{description}}: {{error}}'
-    given: '$.paths.[*].requestBody.content[?(@property.indexOf(''json'') === -1)]^'
+    given: '$.paths.[*].requestBody.content[?(@property.indexOf(''xml'') === -1)]^'
     then:
       function: falsy
   fhir-type-pascal-case:
