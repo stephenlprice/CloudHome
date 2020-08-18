@@ -12,6 +12,14 @@ info:
     Interact with the `'Devices'` API to get a list of registered devices, add or remove devices and to update existing records.
 
     Use this API to leverage __*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
+
+
+    ```bash
+    curl --request GET \
+      --url 'https://cloudhome.io/api/devices/abc?spaceid=all&sort=desc&limit=10' \
+      --header 'apikey: 123' \
+      --header 'deviceid: all'
+    ```
   contact:
     name: Stephen Price
     email: api@cloudhome.io
