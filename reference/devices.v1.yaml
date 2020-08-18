@@ -129,6 +129,12 @@ paths:
             application/json:
               schema:
                 $ref: ../models/error.v1.yaml
+        'default':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/error.v1.yaml
       operationId: get-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">

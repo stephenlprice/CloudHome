@@ -130,7 +130,7 @@ rules:
   fhir-type-pascal-case:
     description: FHIR "types" must be PascalCase
     message: '{{property}} is not PascalCase: {{error}}'
-    severity: error
+    severity: warn
     recommended: true
     format: oas2
     given: '$.paths[*]~'
