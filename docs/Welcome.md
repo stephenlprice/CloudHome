@@ -57,7 +57,7 @@ With the `'Try It!'` functionality you can send requests directly to our servers
   "headers": {
     "deviceid": "all",
     "apiKey": "123",
-    "Prefer": "code=200, example=device"
+    "Prefer": "code=200, example=devices"
   }
 }
 ```
