@@ -231,7 +231,9 @@ paths:
         curl --request POST \
           --url 'https://cloudhome.io/api/devices/abc?spaceid=all' \
           --header 'apikey: 123' \
-          --header 'devicename: newDevice'
+          --header 'content-type: application/json' \
+          --header 'device-name: newDevice' \
+          --data '[{"deviceID":"string","deviceName":"string","deviceClass":"string","spaceID":"string","alexaCompatible":true,"storageUsed":0,"storageFree":0,"dateCreated":"2017-07-21T17:32:28Z","dateUpdated":"2017-07-21T17:32:28Z"}]'
         ```
       parameters:
         - $ref: '#/components/parameters/spaceid'
