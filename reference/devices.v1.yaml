@@ -409,7 +409,13 @@ paths:
               schema:
                 $ref: ../models/responseCode.v1.yaml
     parameters:
-      - $ref: '#/components/parameters/accountid'
+      - schema:
+          type: string
+          example: jetsonsFutureHome
+        name: accountid
+        in: path
+        required: true
+        description: unique per account (see `'My Account'` for more information)
 components:
   schemas: {}
   parameters:
