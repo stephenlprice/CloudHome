@@ -30,7 +30,9 @@ info:
     url: 'https://opensource.org/licenses/MIT'
 servers:
   - url: 'https://cloudhome.io'
-    description: CloudHome device platform
+    description: CloudHome V1
+  - url: 'https://cloudhome.io/v2'
+    description: CloudHome V2
 paths:
   '/api/devices/{accountid}':
     get:
