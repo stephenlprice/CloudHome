@@ -34,7 +34,7 @@ servers:
 paths:
   '/api/devices/{accountid}':
     get:
-      summary: getDevices
+      summary: listDevices
       tags:
         - devices
       responses:
@@ -138,7 +138,7 @@ paths:
       operationId: get-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs"></i> newDevice
+          <i class="fas fa-robot fa-xs"></i> listDevices
         </span>
 
         Returns a list of devices for an account at a given space (or all spaces if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
@@ -308,7 +308,7 @@ paths:
       operationId: put-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs"></i> newDevice
+          <i class="fas fa-robot fa-xs"></i> updateDevice
         </span>
 
         Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_ by specifying a `'deviceid'`, further device updates must be paginated.
@@ -340,7 +340,7 @@ paths:
       operationId: delete-api-devices
       description: |-
         <span style="font-size: 1.5em; color: #5D535E;">
-          <i class="fas fa-robot fa-xs"></i> newDevice
+          <i class="fas fa-robot fa-xs"></i> removeDevice
         </span>
 
         Delete devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when deleting devices. Users are limited to deleting _**1 device per request**_ by specifying a `'deviceid'`, further device removal must be paginated.
