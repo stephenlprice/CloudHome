@@ -47,7 +47,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/device.v1.json
+                  $ref: ../models/Device Models/device.v1.json
               examples:
                 devices:
                   value:
