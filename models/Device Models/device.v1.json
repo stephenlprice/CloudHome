@@ -1,10 +1,6 @@
 {
   "title": "Device",
   "type": "object",
-  "x-tags": [
-    "devices",
-    "IOT"
-  ],
   "description": "Describes a device activated on a **CloudHome** account. Each class can contain more than one device and location, centrally managed by the CloudHome service cloud.",
   "x-examples": {
     "devices": [
@@ -87,5 +83,8 @@
   },
   "required": [
     "deviceName"
+  ],
+  "x-tags": [
+    "Device Models"
   ]
 }
