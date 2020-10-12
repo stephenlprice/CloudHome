@@ -3,59 +3,29 @@ info:
   title: Devices
   version: '1.0'
   description: |-
-    <span style="font-size: 3em; color: #49fcd4;">
-      <i class="fas fa-robot fa-2x"></i>
-    </span> 
+    <span style="font-size: 3em; color: #5D535E;">
+      <i class="fas fa-robot fa-2x"></i> <i>CloudHome
+    </i></span> 
+    </br>
+    </br>
 
-    Interact with the `'Devices Service'` API to get a list of registered devices, add or remove devices and updating existing records.
+    Interact with the `'Devices'` API to get a list of registered devices, add or remove devices and to update existing records.
 
-    Use this API to leverage __*CloudHome*__'s central repository of devices that will then allow users to manage automation systems at home, at work or on the go.
+    Use this API to leverage __*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
 
-    <ul class="fa-ul" style="padding-top:20px;">
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
-      <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
-      <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to CloudHome</li>
-    </ul>
 
-    Our documentation will provide everything you need to get started right away. Make requests to our endpoints or use the built-in mocks.
-
-    ```json http
-    {
-      "method": "get",
-      "url": "https://cloudhome.io/api/devices/abc/home",
-      "headers": {
-        "API Key": "123"
-      }
-    }
+    ```bash
+    curl --request GET \
+      --url 'https://cloudhome.io/api/devices/abc?spaceid=all&sort=desc&limit=10' \
+      --header 'apikey: 123' \
+      --header 'deviceid: all'
     ```
 
-    We also provide code generation to get your project started as soon as you imagine it!
-
-    ```javascript
-    var data = null;
-
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-
-    xhr.addEventListener("readystatechange", function () {
-      if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-      }
-    });
-
-    xhr.open("GET", "https://cloudhome.io/api/devices/abc/home");
-    xhr.setRequestHeader("api key", "123");
-
-    xhr.send(data);
-    ```
-
-    <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
-    __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
+    ![droids](../assets/images/droids.png)
   contact:
     name: Stephen Price
-    url: 'https://www.linkedin.com/in/slprice/'
-    email: stephen@stoplight.io
+    email: api@cloudhome.io
+    url: cloudhome.io
   termsOfService: cloudhome.io/api/devices/terms
   license:
     name: MIT
@@ -64,51 +34,363 @@ servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
 paths:
-  '/api/devices/{accountid}/{spaceid}':
+  '/api/devices/{accountid}':
     get:
-      summary: getDevices
+      summary: listDevices
       tags:
         - devices
-        - IOT
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/devices.v1.json
+                type: array
+                items:
+                  $ref: ../models/device.v1.json
+              examples:
+                devices:
+                  value:
+                    - deviceID: '123'
+                      deviceName: frontDoorLock
+                      deviceClass: safety
+                      spaceID: home
+                      alexaCompatible: true
+                      storageUsed: 0.003
+                      storageFree: 1
+                      dateCreated: '2017-05-21T20:34:25+42:01'
+                      dateUpdated: '2018-01-29T20:36:30+00:00'
+                    - deviceID: '456'
+                      deviceName: thermostat
+                      deviceClass: comfort
+                      spaceID: home
+                      alexaCompatible: true
+                      storageUsed: 0.025
+                      storageFree: 1
+                      dateCreated: '2019-07-20T15:27:32+18:21'
+                      dateUpdated: '2020-03-01T22:13:24+00:03'
+                    - deviceID: '789'
+                      deviceName: sprinkler
+                      deviceClass: convenience
+                      spaceID: yard
+                      alexaCompatible: false
+                      storageUsed: 0.0018
+                      storageFree: 1
+                      dateCreated: '2020-06-18T11:23:29+44:12'
+                      dateUpdated: '2020-06-18T11:23:29+44:12'
+                device:
+                  value:
+                    - deviceID: abc
+                      deviceName: welcomeDroid
+                      deviceClass: commercial
+                      spaceID: office
+                      alexaCompatible: true
+                      storageUsed: 137
+                      storageFree: 300
+                      dateCreated: '2019-07-20T15:27:32+18:21'
+                      dateUpdated: '2020-03-01T22:13:24+00:03'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://apiguild.stoplight.io/api/v1/projects/apiguild/enterprise-schemas/nodes/error.v1.yaml?branch=master&deref=bundle'
+                $ref: ../models/responseCode.v1.yaml
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
       operationId: get-api-devices
       description: |-
-        Returns a list of devices for an account at a given location (or all locations if using the default value 'all').
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs"></i> listDevices
+        </span>
 
-        Account IDs are provided by the CloudHome platform while Location IDs are defined by the account administrator.
+        Returns a list of devices for an account at a given space (or all spaces if using the default value `'all'`). A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when requesting devices. The response can be further defined by limiting the number of results or sorting them as required.
+
+        If specific devices are desired, users can specify the `'deviceid'` or multiple thereof values in the header.
+
+        More information about required parameters and authentication can be seen below.
+
+        ```bash
+        curl --request GET \
+          --url 'https://cloudhome.io/api/devices/abc?spaceid=all&sort=desc&limit=10' \
+          --header 'apikey: 123' \
+          --header 'deviceid: all'
+        ```
+      parameters:
+        - $ref: '#/components/parameters/spaceid'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/deviceid'
     post:
       summary: newDevice
       tags:
         - devices
-        - IOT
-      responses: {}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
       operationId: post-api-devices
+      description: |-
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs"></i> newDevice
+        </span>
+
+        Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when posting new devices. Users are limited to posting _**10 devices per request**_, further quantities of devices must be paginated.
+
+        More information about required parameters and authentication can be seen below.
+      parameters:
+        - $ref: '#/components/parameters/spaceid'
+        - $ref: '#/components/parameters/deviceName'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: ../models/device.v1.json
+        description: 'The only required field to add a new device is `''deviceName''`, however if left empty it will default to `''newDevice''`. CloudHome assigns unique identifiers (`''deviceID''`) without user intervention. Additional information can be  updated by the user either through the service cloud interface or but using the `''PUT''` operation for this endpoint.'
     put:
       summary: updateDevice
       tags:
         - devices
-        - IOT
-      responses: {}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
       operationId: put-api-devices
+      description: |-
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs"></i> updateDevice
+        </span>
+
+        Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_ by specifying a `'deviceid'`, further device updates must be paginated.
+
+        More information about required parameters and authentication can be seen below.
+      parameters:
+        - $ref: '#/components/parameters/deviceid'
+        - $ref: '#/components/parameters/spaceid'
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: ../models/device.v1.json
+        description: 'Beside the fields the user wishes to update, the only field required by this operation is `''deviceid''`, however if left empty it will default to `''all''`. Such a request will result in error code `''400 Bad Request''` as this operation only allows updating one device per request.'
     delete:
       summary: removeDevice
       tags:
         - devices
         - IOT
-      responses: {}
       operationId: delete-api-devices
+      description: |-
+        <span style="font-size: 1.5em; color: #5D535E;">
+          <i class="fas fa-robot fa-xs"></i> removeDevice
+        </span>
+
+        Delete devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when deleting devices. Users are limited to deleting _**1 device per request**_ by specifying a `'deviceid'`, further device removal must be paginated.
+
+        More information about required parameters and authentication can be seen below.
+
+        ```bash
+        curl --request DELETE \
+          --url 'https://cloudhome.io/api/devices/abc?spaceid=all' \
+          --header 'apikey: 123' \
+          --header 'deviceid: all'
+        ```
+
+        The only field required by this operation is `'deviceid'`, however if left empty it will default to `'all'`. Such a request will result in error code `'400 Bad Request'` as this operation only allows deleting one device per request.
+      parameters:
+        - $ref: '#/components/parameters/deviceid'
+        - $ref: '#/components/parameters/spaceid'
+      responses:
+        '200':
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: ../models/responseCode.v1.yaml
     parameters:
       - schema:
           type: string
@@ -117,19 +399,72 @@ paths:
         in: path
         required: true
         description: unique per account (see `'My Account'` for more information)
-      - schema:
-          type: string
-          default: all
-          example: seattle-office
-        name: spaceid
-        in: path
-        description: location associated with the devices (see `'My Spaces'` for more information)
-        required: true
 components:
   schemas: {}
+  parameters:
+    accountid:
+      schema:
+        type: string
+        example: jetsonsFutureHome
+      name: accountid
+      in: path
+      required: true
+      description: unique per account (see `'My Account'` for more information)
+    spaceid:
+      schema:
+        type: string
+        example: seattle-office
+        default: all
+      in: query
+      name: spaceid
+      description: location associated with the devices (see `'My Spaces'` for more information)
+      allowEmptyValue: true
+    deviceName:
+      schema:
+        type: string
+        default: newDevice
+        example: garageCamera
+      in: header
+      name: Device-Name
+      description: devices in the same space require unique names or will be assigned the default name `'newDevice'`
+      allowEmptyValue: true
+    deviceid:
+      schema:
+        type: string
+        default: all
+        example: 123abc
+      in: header
+      name: Deviceid
+      description: 'unique identifiers for devices registered on the service cloud, when empty it defaults to `''all''`'
+      allowEmptyValue: true
+      required: true
+    sort:
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: desc
+        example: asc
+      in: query
+      name: sort
+      allowEmptyValue: true
+      description: will sort objects returned from the request
+    limit:
+      schema:
+        type: integer
+        default: 10
+        format: int32
+        example: 15
+        maximum: 25
+        minimum: 1
+      in: query
+      name: limit
+      allowEmptyValue: true
+      description: specify the number of results returned from the request
   securitySchemes:
     CloudHome Key:
-      name: API Key
+      name: apiKey
       type: apiKey
       in: header
       description: Provided upon account registration (see `'My Account'` for more information). API Keys can be used as Basic HTTP Authentication credentials and provide a substitute for the account's actual username and password. API Keys are only available to team accounts and there is only 1 key per account. API Keys do not support scopes and have therefore access to all contents of the account.
@@ -170,3 +505,12 @@ components:
       description: ''
 security:
   - CloudHome Key: []
+tags:
+  - name: devices
+    description: relative to device management
+    externalDocs:
+      url: 'https://cloudhome.io/api/tags/devices'
+  - name: IOT
+    description: relative to devices and the 'internet of things'
+    externalDocs:
+      url: 'https://cloudhome.io/api/tags/IOT'
