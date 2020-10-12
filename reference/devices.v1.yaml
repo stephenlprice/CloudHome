@@ -20,6 +20,8 @@ info:
       --header 'apikey: 123' \
       --header 'deviceid: all'
     ```
+
+    ![droids](../assets/images/droids.png)
   contact:
     name: Stephen Price
     email: api@cloudhome.io
@@ -30,9 +32,7 @@ info:
     url: 'https://opensource.org/licenses/MIT'
 servers:
   - url: 'https://cloudhome.io'
-    description: CloudHome V1
-  - url: 'https://cloudhome.io/v2'
-    description: CloudHome V2
+    description: CloudHome device platform
 paths:
   '/api/devices/{accountid}':
     get:
@@ -47,7 +47,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/Device Models/device.v1.json
+                  $ref: ../models/device.v1.json
               examples:
                 devices:
                   value:
@@ -228,15 +228,6 @@ paths:
         Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when posting new devices. Users are limited to posting _**10 devices per request**_, further quantities of devices must be paginated.
 
         More information about required parameters and authentication can be seen below.
-
-        ```bash
-        curl --request POST \
-          --url 'https://cloudhome.io/api/devices/abc?spaceid=all' \
-          --header 'apikey: 123' \
-          --header 'content-type: application/json' \
-          --header 'device-name: newDevice' \
-          --data '[{"deviceID":"string","deviceName":"string","deviceClass":"string","spaceID":"string","alexaCompatible":true,"storageUsed":0,"storageFree":0,"dateCreated":"2017-07-21T17:32:28Z","dateUpdated":"2017-07-21T17:32:28Z"}]'
-        ```
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/deviceName'
@@ -316,15 +307,6 @@ paths:
         Update information for existing devices registerd on the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when updating device data. Users are limited to updating _**1 device per request**_ by specifying a `'deviceid'`, further device updates must be paginated.
 
         More information about required parameters and authentication can be seen below.
-
-        ```bash
-        curl --request PUT \
-          --url 'https://cloudhome.io/api/devices/abc?spaceid=all' \
-          --header 'apikey: 123' \
-          --header 'content-type: application/json' \
-          --header 'deviceid: all' \
-          --data '{"deviceID":"string","deviceName":"string","deviceClass":"string","spaceID":"string","alexaCompatible":true,"storageUsed":0,"storageFree":0,"dateCreated":"2017-07-21T17:32:28Z","dateUpdated":"2017-07-21T17:32:28Z"}'
-        ```
       parameters:
         - $ref: '#/components/parameters/deviceid'
         - $ref: '#/components/parameters/spaceid'
@@ -410,7 +392,13 @@ paths:
               schema:
                 $ref: ../models/responseCode.v1.yaml
     parameters:
-      - $ref: '#/components/parameters/accountid'
+      - schema:
+          type: string
+          example: jetsonsFutureHome
+        name: accountid
+        in: path
+        required: true
+        description: unique per account (see `'My Account'` for more information)
 components:
   schemas: {}
   parameters:
