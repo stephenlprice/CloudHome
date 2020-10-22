@@ -1,6 +1,7 @@
 formats:
   - oas2
   - oas3
+  - json-schema-loose
 extends:
   - 'spectral:oas'
 rules:
