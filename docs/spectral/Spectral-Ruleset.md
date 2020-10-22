@@ -1,6 +1,6 @@
 # Spectral Ruleset
 
-This is the `.spectral.yaml` (style guide) file used in this repository
+This is the `.spectral.yaml` (style guide) file used in this project. Noteworthy rules are described in [this article](Sample-Rules.md).
 
 ``` yaml
 formats:

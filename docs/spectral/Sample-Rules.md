@@ -1,6 +1,6 @@
 # Sample Rules
 
-A collection is noteworthy Spectral rules
+A collection of noteworthy Spectral rules.
 
 ``` yaml
 formats:
