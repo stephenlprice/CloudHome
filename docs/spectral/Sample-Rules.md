@@ -2,13 +2,27 @@
 
 A collection of noteworthy Spectral rules.
 
+### Formats
+
+This style guide validates OpenAPI v2 and v3 as well as json schema loose for models  written with Studio.
+
 ``` yaml
 formats:
   - oas2
   - oas3
   - json-schema-loose
+```
+### Extends
+
+The style guide is extending the core OpenAPI ruleset provided by Spectral.
+
+``` yaml
 extends:
   - 'spectral:oas'
+```
+### Custom Rules
+
+``` yaml
 rules:
   operation-short-summary:
     description: 'Operation summary should be short and sweet, no full stops, and less than 20 characters'
