@@ -1,6 +1,6 @@
-# Spectral Ruleset
+# Sample Rules
 
-This is the `.spectral.yaml` (style guide) file used in this repository
+A collection is noteworthy Spectral rules
 
 ``` yaml
 formats:
@@ -392,5 +392,3 @@ rules:
   contact-properties: info
 
 ```
-
-
