@@ -9,6 +9,7 @@ formats:
   - json-schema-loose
 extends:
   - 'spectral:oas'
+  - example-spectral-ruleset
 rules:
   operation-short-summary:
     description: 'Operation summary should be short and sweet, no full stops, and less than 20 characters'
@@ -390,7 +391,6 @@ rules:
   info-license: info
   license-url: info
   contact-properties: info
+  valid-foo-value: 'off'
 
 ```
-
-

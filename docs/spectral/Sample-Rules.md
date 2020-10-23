@@ -19,6 +19,7 @@ The style guide is extending the core OpenAPI ruleset provided by Spectral.
 ``` yaml
 extends:
   - 'spectral:oas'
+  - example-spectral-ruleset
 ```
 ### Operation Summary <= 20 characters
 
