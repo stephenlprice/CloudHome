@@ -14,7 +14,7 @@ formats:
 ```
 ### Extends
 
-The style guide is extending the core OpenAPI ruleset provided by Spectral.
+The style guide is extending the core OpenAPI ruleset provided by Spectral and a sample ruleset available as a public NPM package [(more on sharing rulesets)](https://meta.stoplight.io/docs/spectral/docs/guides/7-sharing-rulesets.md).
 
 ``` yaml
 extends:
