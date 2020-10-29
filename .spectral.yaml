@@ -5,6 +5,7 @@ formats:
 extends:
   - 'spectral:oas'
   - example-spectral-ruleset
+  - "https://raw.githubusercontent.com/stephenlprice/asyncFunctions/master/.spectral.yaml"
 rules:
   operation-short-summary:
     description: 'Operation summary should be short and sweet, no full stops, and less than 20 characters'
