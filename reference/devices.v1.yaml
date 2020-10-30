@@ -38,7 +38,7 @@ paths:
     get:
       summary: listDevices
       tags:
-        - devices
+        - Devices
       responses:
         '200':
           description: OK
@@ -163,7 +163,7 @@ paths:
     post:
       summary: newDevice
       tags:
-        - devices
+        - Devices
       responses:
         '201':
           description: Created
@@ -242,7 +242,7 @@ paths:
     put:
       summary: updateDevice
       tags:
-        - devices
+        - Devices
       responses:
         '201':
           description: Created
@@ -319,7 +319,7 @@ paths:
     delete:
       summary: removeDevice
       tags:
-        - devices
+        - Devices
         - IOT
       operationId: delete-api-devices
       description: |-
@@ -506,7 +506,7 @@ components:
 security:
   - CloudHome Key: []
 tags:
-  - name: devices
+  - name: Devices
     description: relative to device management
     externalDocs:
       url: 'https://cloudhome.io/api/tags/devices'
