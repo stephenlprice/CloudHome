@@ -171,6 +171,11 @@ paths:
             application/json:
               schema:
                 $ref: ../models/responseCode.v1.yaml
+              examples:
+                '201':
+                  value:
+                    code: 201
+                    message: Created
         '400':
           description: Bad Request
           content:
