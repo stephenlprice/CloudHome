@@ -172,7 +172,7 @@ paths:
               schema:
                 $ref: ../models/responseCode.v1.yaml
               examples:
-                '201':
+                Created:
                   value:
                     code: 201
                     message: Created
