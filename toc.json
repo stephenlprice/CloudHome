@@ -11,6 +11,17 @@
       "uri": "reference/devices.v1.yaml"
     },
     {
+      "type": "group",
+      "title": "Endpoints",
+      "items": [
+        {
+          "type": "item",
+          "title": "Devices",
+          "uri": "reference/devices.v1.yaml/paths/~1api~1devices~1{accountid}"
+        }
+      ]
+    },
+    {
       "type": "divider",
       "title": "Models"
     },
