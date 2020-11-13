@@ -14,9 +14,9 @@
           "title": "Level 2",
           "items": [
             {
-            "type": "item",
-            "title": "Devices",
-            "uri": "reference/devices.v1.yaml"
+              "type": "item",
+              "title": "Device",
+              "uri": "models/device.v1.json"
             }
           ]
         }
@@ -30,11 +30,6 @@
       "type": "item",
       "title": "Account",
       "uri": "models/account.v1.json"
-    },
-    {
-      "type": "item",
-      "title": "Device",
-      "uri": "models/device.v1.json"
     },
     {
       "type": "item",
