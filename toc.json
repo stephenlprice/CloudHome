@@ -6,18 +6,19 @@
       "uri": "docs/Welcome.md"
     },
     {
-      "type": "item",
-      "title": "Devices",
-      "uri": "reference/devices.v1.yaml"
-    },
-    {
       "type": "group",
-      "title": "Endpoints",
+      "title": "Level 1",
       "items": [
         {
-          "type": "item",
-          "title": "Devices",
-          "uri": "reference/devices.v1.yaml/paths/~1api~1devices~1{accountid}"
+          "type": "group",
+          "title": "Level 2",
+          "items": [
+            {
+            "type": "item",
+            "title": "Devices",
+            "uri": "reference/devices.v1.yaml"
+            }
+          ]
         }
       ]
     },
