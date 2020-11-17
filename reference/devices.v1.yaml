@@ -20,9 +20,8 @@ info:
       --header 'apikey: 123' \
       --header 'deviceid: all'
     ```
-    
-    ![droids](https://github.com/stephenlprice/CloudHome/blob/master/assets/images/droids.png?raw=true)
 
+    ![droids](https://github.com/stephenlprice/CloudHome/blob/master/assets/images/droids.png?raw=true)
   contact:
     name: Stephen Price
     email: api@cloudhome.io
@@ -234,6 +233,15 @@ paths:
         Add new devices to the CloudHome service cloud. A valid `'CloudHome Key'` is required to authenticate, users must also specify their `'accountid'` when posting new devices. Users are limited to posting _**10 devices per request**_, further quantities of devices must be paginated.
 
         More information about required parameters and authentication can be seen below.
+
+        ```bash
+        curl --request POST \
+          --url 'https://cloudhome.io/api/devices/abc?spaceid=all' \
+          --header 'apikey: 123' \
+          --header 'content-type: application/json' \
+          --header 'device-name: newDevice' \
+          --data '[{"deviceID":"string","deviceName":"string","deviceClass":"string","spaceID":"string","alexaCompatible":true,"storageUsed":0,"storageFree":0,"dateCreated":"2017-07-21T17:32:28Z","dateUpdated":"2017-07-21T17:32:28Z"}]'
+        ```
       parameters:
         - $ref: '#/components/parameters/spaceid'
         - $ref: '#/components/parameters/deviceName'
