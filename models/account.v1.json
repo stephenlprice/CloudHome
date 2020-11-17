@@ -1,7 +1,10 @@
 {
-  "title": "Accounts",
+  "title": "Account",
   "type": "object",
   "description": "Users can belong to multiple accounts on CloudHome's federated services. In other words users have a unique id that can interact or manage devices on more than one account or location.",
+  "x-tags": [
+    "IOT"
+  ],
   "properties": {
     "accountID": {
       "type": "string"
@@ -33,6 +36,16 @@
     },
     "vpnEnabled": {
       "type": "boolean"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2017-07-21T17:32:28Z"
+    },
+    "dateUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2017-07-21T17:32:28Z"
     }
   },
   "required": [

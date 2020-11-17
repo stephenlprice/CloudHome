@@ -1,8 +1,7 @@
 {
-  "title": "Users",
+  "title": "User",
   "type": "object",
   "x-tags": [
-    "users",
     "IOT"
   ],
   "description": "Users associated with a CloudHome account. Administrative priviledges are indicated to show which users can configure device management and which users can only interact with configured devices.",
@@ -24,6 +23,16 @@
     },
     "deviceCount": {
       "type": "integer"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2017-07-21T17:32:28Z"
+    },
+    "dateUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2017-07-21T17:32:28Z"
     }
   },
   "required": [

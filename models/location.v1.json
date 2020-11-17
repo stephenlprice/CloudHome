@@ -2,6 +2,10 @@
   "title": "Location",
   "type": "object",
   "description": "Device geolocation at most recent update. Users can optionally choose to turn off geolocation, however key features such as mapping will not be available.",
+  "x-tags": [
+    "IOT",
+    "devices"
+  ],
   "properties": {
     "deviceID": {
       "type": "string"
@@ -14,6 +18,11 @@
     },
     "geolocation": {
       "type": "boolean"
+    },
+    "dateUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2017-07-21T17:32:28Z"
     }
   },
   "required": [
