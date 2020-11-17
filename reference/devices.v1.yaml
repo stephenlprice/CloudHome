@@ -20,8 +20,9 @@ info:
       --header 'apikey: 123' \
       --header 'deviceid: all'
     ```
-
+    
     ![droids](https://github.com/stephenlprice/CloudHome/blob/master/assets/images/droids.png?raw=true)
+
   contact:
     name: Stephen Price
     email: api@cloudhome.io
