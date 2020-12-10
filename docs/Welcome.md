@@ -17,6 +17,8 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
   <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
 </ul>
 
+![droid](https://images.unsplash.com/photo-1527430253228-e93688616381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2391&q=80)
+
 ### Code Generation
 
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
@@ -48,7 +50,7 @@ With the `'Try It!'` functionality you can send requests directly to our servers
 ```json http
 {
   "method": "get",
-  "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/123",
+  "url": "https://apiguild.stoplight.io/mocks/apiguild/cloudhome/30785/api/devices/abc",
   "query": {
     "spaceid": "all",
     "sort": "desc",
@@ -57,7 +59,7 @@ With the `'Try It!'` functionality you can send requests directly to our servers
   "headers": {
     "deviceid": "all",
     "apiKey": "123",
-    "Prefer": "code=200, example=device"
+    "Prefer": "code=200, example=devices"
   }
 }
 ```

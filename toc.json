@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Welcome!",
+      "uri": "docs/Welcome.md"
+    },
+    {
+      "type": "item",
+      "title": "Devices",
+      "uri": "reference/devices.v1.yaml"
+    },
+    {
+      "type": "divider",
+      "title": "Models"
+    },
+    {
+      "type": "item",
+      "title": "Account",
+      "uri": "models/account.v1.json"
+    },
+    {
+      "type": "item",
+      "title": "Device",
+      "uri": "models/device.v1.json"
+    },
+    {
+      "type": "item",
+      "title": "Location",
+      "uri": "models/location.v1.json"
+    },
+    {
+      "type": "item",
+      "title": "Response Status",
+      "uri": "models/responseCode.v1.yaml"
+    },
+    {
+      "type": "item",
+      "title": "Space",
+      "uri": "models/space.v1.json"
+    },
+    {
+      "type": "item",
+      "title": "User",
+      "uri": "models/user.v1.json"
+    },
+    {
+      "type": "divider",
+      "title": "spectral"
+    },
+    {
+      "type": "item",
+      "title": "Spectral Ruleset",
+      "uri": "docs/spectral/Spectral-Ruleset.md"
+    },
+    {
+      "type": "item",
+      "title": "Sample Rules",
+      "uri": "docs/spectral/Sample-Rules.md"
+    }
+  ]
+}
