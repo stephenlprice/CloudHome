@@ -23,6 +23,8 @@ info:
 servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
+  - description: ''
+    url: 'https://cloudhome.io/v1'
 paths:
   '/api/devices/{accountid}':
     get:
