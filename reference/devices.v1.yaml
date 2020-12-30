@@ -35,6 +35,8 @@ servers:
     description: CloudHome device platform
   - description: ''
     url: 'https://cloudhome.io/v1'
+  - url: 'https://staging.cloudhome.io/v1'
+    description: ''
 paths:
   '/api/devices/{accountid}':
     get:
