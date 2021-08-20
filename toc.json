@@ -6,13 +6,17 @@
       "uri": "docs/Welcome.md"
     },
     {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
       "type": "item",
       "title": "Devices",
       "uri": "reference/devices.v1.yaml"
     },
     {
       "type": "divider",
-      "title": "Models"
+      "title": "Schemas"
     },
     {
       "type": "item",
