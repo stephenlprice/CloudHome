@@ -1,9 +1,4 @@
-</br>
-<span style="font-size: 3em; color: #5D535E;">
-  <i class="fas fa-robot fa-2x"></i> <i>CloudHome
-</i></span> 
-</br>
-</br>
+# CloudHome
 
 This is my first [OpenAPI](https://www.openapis.org/) project written with [Stoplight Studio](https://stoplight.io/api-design/).
 
