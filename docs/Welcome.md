@@ -10,12 +10,6 @@ Interact with the `'Devices'` API to get a list of registered devices, add or re
 
 Use this API to leverage __*CloudHome*__'s central repository of devices that allows users to manage automation systems at home, at work or on the go.
 </br>
-<ul class="fa-ul" style="list-style-type:none;">
-  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Register a device</li>
-  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Apply custom runtime settings</li>
-  <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Sync devices</li>
-  <li><span class="fa-li"><i class="far fa-square"></i></span>Invite friends to <strong>CloudHome<strong></li>
-</ul>
 
 ![droid](https://images.unsplash.com/photo-1527430253228-e93688616381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2391&q=80)
 
@@ -24,22 +18,21 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
 
 ```javascript
-var data = null;
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
+fetch("https://stoplight.io/mocks/stelloprint/cloudhome/30785/api/devices/123abc?spaceid=456xyz&sort=desc&limit=10", {
+  "method": "GET",
+  "headers": {
+    "Content-Type": "application/json",
+    "Deviceid": "all",
+    "Prefer": "code=200",
+    "apiKey": "123"
   }
+})
+.then(response => {
+  console.log(response);
+})
+.catch(err => {
+  console.error(err);
 });
-
-xhr.open("GET", "https://cloudhome.io/api/devices/123?spaceid=all&sort=desc&limit=10");
-xhr.setRequestHeader("deviceid", "all");
-xhr.setRequestHeader("apikey", "123");
-
-xhr.send(data);
 ```
 > __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
 
@@ -59,10 +52,10 @@ With the `'Try It!'` functionality you can send requests directly to our servers
   "headers": {
     "deviceid": "all",
     "apiKey": "123",
-    "Prefer": "code=200, example=devices"
   }
 }
 ```
+</br>
 
 ### Data Models
 
