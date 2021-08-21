@@ -13,6 +13,8 @@ Use this API to leverage __*CloudHome*__'s central repository of devices that al
 
 ![droid](https://images.unsplash.com/photo-1527430253228-e93688616381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2391&q=80)
 
+> __*CloudHome*__ is the world's best device management and home automation solution. Our `APIs` are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
+
 ### Code Generation
 
 **CloudHome**'s API documentation provides code generation to get your project started as soon as you imagine it!
@@ -34,15 +36,16 @@ fetch("https://stoplight.io/mocks/stelloprint/cloudhome/30785/api/devices/123abc
   console.error(err);
 });
 ```
-> __*CloudHome*__ is the world's best device management and home automation solution. Our `API`s are just as great as our user-friendly UI, making us the first choice for systems integrators around the world. Bring the power of IOT to your life with __*CloudHome*__.
 
 ### Interactive Documentation
 
 With the `'Try It!'` functionality you can send requests directly to our servers provided that you have a valid account and **CloudHome Key**, if you are not an existing customer you can use the built-in mock server for free! 
 
-For a quick run, type in the values provided as examples for each parameter (empty values will return a `404` response).
+<!-- theme: success -->
+>Click `'Send Request'` using the _**Request Maker**_ below to get a sample mocked response.
 
-Click `'Send'` in the embedded _**Request Maker**_ below to get a sample mocked response:
+<!-- theme: warning -->
+>Type in sample values or use the examples provided for each parameter (empty values will return a `404` response).
 
 ```json http
 {
