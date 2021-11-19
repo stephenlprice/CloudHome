@@ -1,0 +1,29 @@
+{
+  "name": "cloudhome",
+  "version": "1.0.0",
+  "description": "API docs generated from an OpenAPI file. CloudHome's central repository of devices allows users to manage automation systems at home, at work, or on the go.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenlprice/CloudHome.git"
+  },
+  "keywords": [
+    "openapi"
+  ],
+  "author": "stelloprint",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenlprice/CloudHome/issues"
+  },
+  "homepage": "https://github.com/stephenlprice/CloudHome#readme",
+  "dependencies": {
+    "@stoplight/prism-cli": "^4.6.0",
+    "@stoplight/spectral-cli": "^6.1.0"
+  }
+}
