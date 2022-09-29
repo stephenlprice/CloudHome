@@ -79,6 +79,8 @@ paths:
       tags: []
       responses: {}
       operationId: post-auth
+      requestBody:
+        $ref: '#/components/requestBodies/Authenticate-Request-Body'
 components:
   schemas:
     Authenticate-Payload:
@@ -142,4 +144,10 @@ components:
             username: user@email.com
             scopes:
               - 'tableau:datasources:create'
+  requestBodies:
+    Authenticate-Request-Body:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Authenticate-Payload'
 x-internal: false
