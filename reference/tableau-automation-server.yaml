@@ -81,6 +81,17 @@ paths:
       operationId: post-auth
       requestBody:
         $ref: '#/components/requestBodies/Authenticate-Request-Body'
+      description: |-
+        Receives requests from frontend applications for authentication tokens to be used for accessing Tableau functionality such as displaying embedded content or accessing the Tableau's REST API.
+
+        Responds with either a JWT used for Connected Apps authentication of embedded Tableau views or an API Key for interaction with Tableau's REST API. Therefore this endpoints supports:
+
+        - Signing JWTs with scopes defined for embedding or REST API requests
+        - PAT (personal access token) authentication to the REST API
+        - Username and password authentication to the REST API
+        - Optional impersonation of users for authentication to the REST API
+
+        For modular web applications that do not rely on a single backend server as is the case with MVC or monolith architecture, this microservice will allow your project to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment.
 components:
   schemas:
     Authenticate-Payload:
