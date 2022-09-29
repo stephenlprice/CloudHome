@@ -15,6 +15,11 @@
       "uri": "reference/devices.v1.yaml"
     },
     {
+      "type": "item",
+      "title": "Tableau Automation Server",
+      "uri": "reference/tableau-automation-server.yaml"
+    },
+    {
       "type": "divider",
       "title": "Schemas"
     },
