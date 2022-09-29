@@ -99,6 +99,8 @@ components:
       x-stoplight:
         id: m5uneqzor6myd
       type: object
+      examples: []
+      description: ''
       properties:
         type:
           type: string
@@ -107,6 +109,12 @@ components:
             - jwt
             - pat
             - password
+        usage:
+          type: string
+          enum:
+            - embed
+            - rest
+          example: rest
         credentials:
           oneOf:
             - properties:
@@ -148,13 +156,8 @@ components:
           type: object
       required:
         - type
+        - usage
         - credentials
-      examples:
-        - type: jwt
-          credentials:
-            username: user@email.com
-            scopes:
-              - 'tableau:datasources:create'
   requestBodies:
     Authenticate-Request-Body:
       content:
