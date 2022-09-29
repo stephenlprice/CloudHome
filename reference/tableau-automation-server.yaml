@@ -1,0 +1,78 @@
+openapi: 3.1.0
+x-stoplight:
+  id: ntyj5k0gu8kqo
+info:
+  title: tableau-automation-server
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /webhook:
+    post:
+      summary: Webhooks
+      tags: []
+      responses:
+        '202':
+          description: Accepted
+        '400':
+          description: Bad Request
+      operationId: post-webhook
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: webhooks payload
+              properties:
+                resource:
+                  type: string
+                  example: WORKBOOK
+                event_type:
+                  type: string
+                  example: WorkbookRefreshSucceeded
+                resource_name:
+                  type: string
+                  example: My Workbook
+                site_luid:
+                  type: string
+                  format: uuid
+                  example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+                resource_luid:
+                  type: string
+                  format: uuid
+                  example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+                created_at:
+                  type: string
+                  format: date-time
+                  example: '2018-11-15T17:14:45Z'
+              required:
+                - resource
+                - event_type
+                - resource_name
+                - site_luid
+                - resource_luid
+                - created_at
+            examples:
+              Webhooks Payload:
+                value:
+                  resource: WORKBOOK
+                  event_type: WorkbookRefreshSucceeded
+                  resource_name: My Workbook
+                  site_luid: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+                  resource_luid: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+                  created_at: '2018-11-15T17:14:45Z'
+        description: 'When one of the subscribed events fires, a JSON payload is sent to the URL that is configured. The payloads are the same format for all events but the content in the fields varies based on the event type.'
+      description: |-
+        Webhooks are a common method whereby one computer system can notify another that an event has occurred using standard web technologies such as HTTP and JSON.
+
+        With Tableau Webhooks, you have the ability to automatically trigger these workflows. When events happen in Tableau, a notification can be sent wherever you want, triggering a workflow. Here are some examples of what you can do with Webhooks:
+
+        - When an extract refresh fails, file a ticket in ServiceNow automatically.
+        - When a workbook is updated, notify your team via their Slack channel.
+        - When a data source is published, email a data steward asking them to review and certify it.
+        - When a workbook refresh completes successfully, generate a PDF and post it to SharePoint.
+
+        System and Site Admins have the ability to create and manage Webhooks within a Site using the Webhooks REST API. You can write your own code to do this or use the [Tableau Webhooks Postman collection](https://github.com/tableau/webhooks-docs).
+components:
+  schemas: {}
+x-internal: false
