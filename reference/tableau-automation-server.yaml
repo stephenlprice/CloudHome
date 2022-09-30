@@ -100,7 +100,9 @@ paths:
         - Username and password authentication to the REST API
         - Optional impersonation of users for authentication to the REST API
 
-        Modular web applications that do not rely on a single backend server to store secure secrets (as is the case with MVC or monolith architectures), this microservice will allow your project to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment and making them available to the frontend in browser clients.
+        Modular web applications that do not rely on a single backend server to store secure secrets (as is the case with MVC or monolith architectures) can deploy this microservice to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment and making them available to the frontend in browser clients.
+
+        Once users succesfully authenticate to an embedding application, requests can be sent to this endpoint for access to protected Tableau functionality.
       requestBody:
         $ref: '#/components/requestBodies/Authenticate'
 components:
