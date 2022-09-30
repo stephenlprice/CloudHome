@@ -238,7 +238,7 @@ components:
         api_version:
           type: string
           example: '3.16'
-          default: '3.16'
+          default: 3.16
         site_id:
           type: string
           format: uuid
@@ -272,9 +272,10 @@ components:
           type: string
           format: date-time
           example: '2018-11-15T17:14:45Z'
-        api_key:
+        token:
           type: string
           example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+          description: JWT or API key
       required:
         - site_name
         - api_version
@@ -283,7 +284,7 @@ components:
         - session_type
         - session_minutes
         - session_date
-        - api_key
+        - token
   requestBodies:
     Authenticate:
       content:
