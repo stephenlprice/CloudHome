@@ -109,12 +109,7 @@ components:
             - jwt
             - pat
             - password
-        usage:
-          type: string
-          enum:
-            - embed
-            - rest
-          example: rest
+          default: jwt
         credentials:
           oneOf:
             - $ref: '#/components/schemas/JWT'
@@ -122,7 +117,6 @@ components:
             - $ref: '#/components/schemas/Password'
       required:
         - type
-        - usage
         - credentials
     JWT:
       title: JWT
@@ -133,6 +127,13 @@ components:
         username:
           type: string
           example: user@email.com
+        usage:
+          type: string
+          enum:
+            - embed
+            - rest
+          example: rest
+          default: rest
         scopes:
           type: array
           uniqueItems: true
