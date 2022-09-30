@@ -293,7 +293,7 @@ components:
   securitySchemes: {}
   responses:
     '201':
-      description: The /auth endpoint responds with a session object to successful requests. Session objects can be used to authenticate users to embedded views or they can be used for sending requests to Tableau's REST API as a result of the "type" field in the request body.
+      description: The `/auth` endpoint responds with a session object to successful requests. Session objects can be used to authenticate users to embedded views or they can be used for sending requests to Tableau's REST API as a result of the `type` field in the request body declared as either `embed` or `rest`.
       content:
         application/json:
           schema:
