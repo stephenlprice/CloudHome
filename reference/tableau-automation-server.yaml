@@ -6,6 +6,10 @@ info:
   summary: A Flask server used to respond to Tableau webhooks for automation and notifications
   license:
     name: MIT
+    identifier: MIT
+  contact:
+    name: stelloprint
+    url: 'https://github.com/stephenlprice'
 servers:
   - url: 'https://your-server-domain'
     description: Automation Server
@@ -208,6 +212,65 @@ components:
           format: password
       required:
         - impersonate
+    Session:
+      title: Session
+      x-stoplight:
+        id: hma68sgvf9mnu
+      type: object
+      properties:
+        site_name:
+          type: string
+          example: my-tableau-site
+        api_version:
+          type: string
+          example: '3.16'
+          default: '3.16'
+        site_id:
+          type: string
+          format: uuid
+          example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+        paths:
+          type: object
+          required:
+            - classic
+            - new
+          properties:
+            classic:
+              type: string
+              example: '{server}/api/{api-version-number}'
+              format: uri
+            new:
+              type: string
+              format: uri
+              example: '{server}/api/-'
+        session_type:
+          type: string
+          enum:
+            - rest
+            - embed
+          example: rest
+        session_minutes:
+          type: string
+          format: duration
+          default: 240
+          example: '240'
+        session_date:
+          type: string
+          format: date-time
+          example: '{server}/api/-'
+        api_key:
+          type: string
+          example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
+      required:
+        - site_name
+        - api_version
+        - site_id
+        - paths
+        - session_type
+        - session_minutes
+        - session_date
+        - api_key
+      description: A session object containing an API key for authentication to embedded views or interaction with Tableau's REST API. Contains additional metadata that will be useful for client applications
   requestBodies:
     Authenticate:
       content:
@@ -215,4 +278,13 @@ components:
           schema:
             $ref: '#/components/schemas/Authenticate'
   securitySchemes: {}
+  responses:
+    Authenticate:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                type: string
 x-internal: false
