@@ -280,11 +280,9 @@ components:
   securitySchemes: {}
   responses:
     Authenticate:
-      description: Example response
+      description: The auth endpoint responds with a Session object for successful requests
       content:
         application/json:
           schema:
-            properties:
-              id:
-                type: string
+            $ref: '#/components/schemas/Session'
 x-internal: false
