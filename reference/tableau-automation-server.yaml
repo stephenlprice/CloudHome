@@ -86,7 +86,7 @@ paths:
       tags: []
       responses:
         '201':
-          $ref: '#/components/responses/Authenticate'
+          $ref: '#/components/responses/201'
         '400':
           description: Bad Request
       operationId: post-auth
@@ -292,8 +292,8 @@ components:
             $ref: '#/components/schemas/Authenticate'
   securitySchemes: {}
   responses:
-    Authenticate:
-      description: The auth endpoint responds with a Session object for successful requests
+    '201':
+      description: The /auth endpoint responds with a session object to successful requests. Session objects can be used to authenticate users to embedded views or they can be used for sending requests to Tableau's REST API as a result of the "type" field in the request body.
       content:
         application/json:
           schema:
