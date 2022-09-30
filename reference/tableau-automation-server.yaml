@@ -117,51 +117,97 @@ components:
           example: rest
         credentials:
           oneOf:
-            - properties:
-                username:
-                  type: string
-                  example: user@email.com
-                scopes:
-                  type: array
-                  minItems: 1
-                  uniqueItems: true
-                  items:
-                    type: string
-                    enum:
-                      - 'tableau:datasources:create'
-                    example: 'tableau:datasources:create'
-              required:
-                - scopes
-            - properties:
-                impersonate:
-                  type: boolean
-                  default: false
-                username:
-                  type: string
-                  example: user@email.com
-              required:
-                - impersonate
-            - properties:
-                impersonate:
-                  type: boolean
-                  default: false
-                username:
-                  type: string
-                  example: user@email.com
-                password:
-                  type: string
-                  format: password
-              required:
-                - impersonate
-          type: object
+            - $ref: '#/components/schemas/JWT'
+            - $ref: '#/components/schemas/PAT'
+            - $ref: '#/components/schemas/Password'
       required:
         - type
         - usage
         - credentials
+    JWT:
+      title: JWT
+      x-stoplight:
+        id: 5i4erjqu0lhk7
+      type: object
+      properties:
+        username:
+          type: string
+          example: user@email.com
+        scopes:
+          type: array
+          uniqueItems: true
+          minItems: 1
+          items:
+            type: string
+            example: 'tableau:datasources:create'
+            enum:
+              - 'tableau:datasources:create'
+              - 'tableau:content:read'
+              - 'tableau:datasources:update'
+              - 'tableau:tasks:run'
+              - 'tableau:flows:create'
+              - 'tableau:metrics:delete'
+              - 'tableau:metrics:download'
+              - 'tableau:metrics:update'
+              - 'tableau:views:download'
+              - 'tableau:workbooks:create'
+              - 'tableau:workbooks:download'
+              - 'tableau:workbooks:update'
+              - 'tableau:file_uploads:create'
+              - 'tableau:groups:update'
+              - 'tableau:users:create'
+              - 'tableau:groups:read'
+              - 'tableau:users:read'
+              - 'tableau:groups:update'
+              - 'tableau:users:delete'
+              - 'tableau:users:update'
+              - 'tableau:groups:create'
+              - 'tableau:groups:delete'
+              - 'tableau:projects:create'
+              - 'tableau:projects:delete'
+              - 'tableau:content:read'
+              - 'tableau:projects:update'
+              - 'tableau:permissions:update'
+              - 'tableau:permissions:delete'
+              - 'tableau:permissions:read'
+              - 'tableau:sites:update'
+      required:
+        - scopes
+    PAT:
+      title: PAT
+      x-stoplight:
+        id: x5ilttl9g0rtf
+      type: object
+      properties:
+        impersonate:
+          type: boolean
+          default: false
+        username:
+          type: string
+          example: user@email.com
+      required:
+        - impersonate
+    Password:
+      title: Password
+      x-stoplight:
+        id: ug2h2smpcgwyt
+      type: object
+      properties:
+        impersonate:
+          type: boolean
+          default: false
+        username:
+          type: string
+          example: user@email.com
+        password:
+          type: string
+          format: password
+      required:
+        - impersonate
   requestBodies:
     Authenticate-Request-Body:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Authenticate-Payload'
+            $ref: '#/components/schemas/Authenticate'
 x-internal: false
