@@ -91,16 +91,16 @@ paths:
           description: Bad Request
       operationId: post-auth
       description: |-
-        Receives requests from frontend applications for authentication tokens to be used for accessing Tableau functionality such as displaying embedded content or accessing the Tableau's REST API.
+        Receives requests from frontend applications for tokens to be used for accessing Tableau functionality such as authenticating users to embedded content for SSO or sending requests to Tableau's REST API.
 
-        Responds with either a JWT used for Connected Apps authentication of embedded Tableau views or an API Key for interaction with Tableau's REST API. Therefore this endpoints supports:
+        Succesful requests will result in a response containing either a JWT used for authentication to embedded Tableau views via Connected Apps or an API Key used for interaction with Tableau's REST API by adding it to the `X-Tableau-Auth` header. Therefore this endpoints supports:
 
-        - Signing JWTs with scopes defined for embedding or REST API requests
+        - Signing JWTs with scopes defined for authentication to embedded views or REST API requests
         - PAT (personal access token) authentication to the REST API
         - Username and password authentication to the REST API
         - Optional impersonation of users for authentication to the REST API
 
-        For modular web applications that do not rely on a single backend server as is the case with MVC or monolith architecture, this microservice will allow your project to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment.
+        Modular web applications that do not rely on a single backend server to store secure secrets (as is the case with MVC or monolith architectures), this microservice will allow your project to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment and making them available to the frontend in browser clients.
       requestBody:
         $ref: '#/components/requestBodies/Authenticate'
 components:
