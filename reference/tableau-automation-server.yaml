@@ -84,7 +84,11 @@ paths:
     post:
       summary: Authenticate
       tags: []
-      responses: {}
+      responses:
+        '201':
+          $ref: '#/components/responses/Authenticate'
+        '400':
+          description: Bad Request
       operationId: post-auth
       description: |-
         Receives requests from frontend applications for authentication tokens to be used for accessing Tableau functionality such as displaying embedded content or accessing the Tableau's REST API.
@@ -117,6 +121,13 @@ components:
             - pat
             - password
           default: jwt
+        server:
+          type: string
+          format: uri
+          example: 'https://my-tableau-domain.com'
+        site:
+          type: string
+          example: my-tableau-site
         credentials:
           oneOf:
             - $ref: '#/components/schemas/JWT'
@@ -124,6 +135,8 @@ components:
             - $ref: '#/components/schemas/Password'
       required:
         - type
+        - server
+        - site
         - credentials
     JWT:
       title: JWT
@@ -217,6 +230,7 @@ components:
       x-stoplight:
         id: hma68sgvf9mnu
       type: object
+      description: A session object containing an API key for authentication to embedded views or interaction with Tableau's REST API. Contains additional metadata that will be useful for client applications
       properties:
         site_name:
           type: string
@@ -250,14 +264,14 @@ components:
             - embed
           example: rest
         session_minutes:
-          type: string
           format: duration
           default: 240
-          example: '240'
+          example: 240
+          type: number
         session_date:
           type: string
           format: date-time
-          example: '{server}/api/-'
+          example: '2018-11-15T17:14:45Z'
         api_key:
           type: string
           example: 8b2a95d8-52b9-40a4-8712-cd6da771bd1b
@@ -270,7 +284,6 @@ components:
         - session_minutes
         - session_date
         - api_key
-      description: A session object containing an API key for authentication to embedded views or interaction with Tableau's REST API. Contains additional metadata that will be useful for client applications
   requestBodies:
     Authenticate:
       content:
