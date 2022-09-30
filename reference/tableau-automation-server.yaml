@@ -94,13 +94,13 @@ paths:
         For modular web applications that do not rely on a single backend server as is the case with MVC or monolith architecture, this microservice will allow your project to have a secure location for secrets, tokens and passwords required to interact with a Tableau environment.
 components:
   schemas:
-    Authenticate-Payload:
-      title: Authenticate-Payload
+    Authenticate:
+      title: Authenticate
       x-stoplight:
         id: m5uneqzor6myd
       type: object
       examples: []
-      description: ''
+      description: 'Describes the requested authentication to Tableau Services by a client, such as is required for displaying embedded views or sending requests to Tableau''s REST API.'
       properties:
         type:
           type: string
