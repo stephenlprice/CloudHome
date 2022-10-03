@@ -9,9 +9,9 @@ info:
     </br>
     </br>
 
-    Interact with the `'Devices'` API to get a list of registered devices, add or remove devices and to update existing records.
+    Interact with the `'Devices'` API to get a list of registered devices, add or remove devices, and to update existing records.
 
-    Use this API to leverage __*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
+    Use this API to leverage _*CloudHome*__'s central repository of devices that allow's users to manage automation systems at home, at work or on the go.
 
 
     ```bash
@@ -20,9 +20,8 @@ info:
       --header 'apikey: 123' \
       --header 'deviceid: all'
     ```
-    
-    ![droids](https://github.com/stephenlprice/CloudHome/blob/master/assets/images/droids.png?raw=true)
 
+    ![droids](https://github.com/stephenlprice/CloudHome/blob/master/assets/images/droids.png?raw=true)
   contact:
     name: Stephen Price
     email: api@cloudhome.io
@@ -34,6 +33,10 @@ info:
 servers:
   - url: 'https://cloudhome.io'
     description: CloudHome device platform
+  - description: ''
+    url: 'https://cloudhome.io/v1'
+  - url: 'https://staging.cloudhome.io/v1'
+    description: ''
 paths:
   '/api/devices/{accountid}':
     get:
